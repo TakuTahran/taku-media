@@ -237,18 +237,33 @@
     </footer>
     
     <script>
-      document.getElementById('seoAuditForm').addEventListener('submit', function(e) {
-        // Don't prevent default - let Netlify handle form submission
-        // But we'll also call our API to get the audit results
+      const handleSubmit = event => {
+        event.preventDefault();
+
+        const myForm = event.target;
+        const formData = new FormData(myForm);
         
-        // Get form data
-        const formData = new FormData(this);
+        // Get individual field values
         const name = formData.get('name');
         const website = formData.get('website');
         const cellphone = formData.get('cellphone');
         const email = formData.get('email');
+
+        // Submit form via AJAX to Netlify
+        fetch("/", {
+          method: "POST",
+          headers: { "Content-Type": "application/x-www-form-urlencoded" },
+          body: new URLSearchParams(formData).toString()
+        })
+        .then(() => {
+          // Form submitted successfully to Netlify
+          console.log("Form submitted successfully");
+        })
+        .catch(error => {
+          console.error("Form submission error:", error);
+        });
         
-        // Show loading state
+        // Show loading state for SEO audit
         document.getElementById('seoAuditForm').classList.add('hidden');
         document.getElementById('loadingState').classList.remove('hidden');
         
@@ -279,14 +294,16 @@
           document.getElementById('bestPracticesScore').textContent = data.bestPractices + '/100';
         })
         .catch(error => {
-          console.error('Error:', error);
+          console.error('SEO Audit Error:', error);
           // Even if we can't get the audit, we still want to show success
           // since the form submission to Netlify worked
           document.getElementById('loadingState').classList.add('hidden');
           document.getElementById('resultsState').classList.remove('hidden');
           document.getElementById('seoScore').textContent = 'Audit in progress';
         });
-      });
+      };
+
+      document.getElementById("seoAuditForm").addEventListener("submit", handleSubmit);
     </script>
   </body>
 </html>
