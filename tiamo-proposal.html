@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>TI AMO ENTERTAINMENT Proposal - Taku Media</title>
+    <meta name="description" content="Content strategy proposal for TI AMO ENTERTAINMENT Group." />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 24 24' fill='none' stroke='%2300E5FF' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m18 16 4-4-4-4'/%3E%3Cpath d='m6 8-4 4 4 4'/%3E%3Cpath d='m14.5 4-5 16'/%3E%3C/svg%3E" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-white text-slate-800 antialiased min-h-screen selection:bg-cyan-500/20 selection:text-cyan-900 scroll-smooth">
+    <!-- Background Orbs / Grid -->
+    <div aria-hidden="true" class="pointer-events-none fixed inset-0 -z-10 overflow-hidden">
+      <div class="absolute -top-40 -left-40 h-[32rem] w-[32rem] rounded-full bg-cyan-500/5 blur-3xl animate-pulse"></div>
+      <div class="absolute top-1/2 -right-40 h-[36rem] w-[36rem] rounded-full bg-fuchsia-500/5 blur-3xl animate-pulse"></div>
+      <div class="absolute inset-0 opacity-[0.06]">
+        <svg class="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
+          <defs>
+            <pattern id="grid" width="8" height="8" patternUnits="userSpaceOnUse">
+              <path d="M 8 0 L 0 0 0 8" fill="none" stroke="black" stroke-opacity="0.6" stroke-width="0.2" />
+            </pattern>
+          </defs>
+          <rect width="100%" height="100%" fill="url(#grid)"></rect>
+        </svg>
+      </div>
+    </div>
+
+    <!-- Header -->
+    <header class="sticky top-0 z-50 backdrop-blur-xl bg-white/70 border-b border-slate-200">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="h-16 flex items-center justify-between">
+          <!-- Logo -->
+          <a href="./index.html#home" class="flex items-center space-x-3 group">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-code2 h-8 w-8 text-cyan-600 group-hover:text-cyan-500 transition-colors">
+              <path d="m18 16 4-4-4-4"></path>
+              <path d="m6 8-4 4 4 4"></path>
+              <path d="m14.5 4-5 16"></path>
+            </svg>
+            <span class="text-xl tracking-tight" style="font-family: 'Segoe UI Black','Segoe UI',ui-sans-serif,system-ui,-apple-system,Roboto,Arial,sans-serif; font-weight: 900;">
+              Taku Media
+            </span>
+          </a>
+
+          <!-- Nav -->
+          <nav class="hidden md:flex items-center gap-8">
+            <a href="./index.html" class="text-sm font-medium text-slate-600 hover:text-slate-900 transition-colors">Home</a>
+            
+            <!-- Services dropdown -->
+            <div class="relative group">
+              <a href="./index.html#services" class="text-sm font-medium text-slate-600 hover:text-slate-900 transition-colors flex items-center gap-1">
+                Services
+                <svg xmlns="http://www.w3.org/2000/svg" class="lucide lucide-chevron-down h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="m6 9 6 6 6-6"/></svg>
+              </a>
+              <div class="absolute left-0 w-56 rounded-xl border border-slate-200 bg-white shadow-lg opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none group-hover:pointer-events-auto">
+                <a href="./research-strategy.html" class="block px-4 py-3 text-sm font-medium text-slate-600 hover:text-slate-900 hover:bg-slate-50 rounded-t-xl">Research & Strategy</a>
+                <a href="./product-design.html" class="block px-4 py-3 text-sm font-medium text-slate-600 hover:text-slate-900 hover:bg-slate-50">Product Design</a>
+                <a href="./web-design-seo.html" class="block px-4 py-3 text-sm font-medium text-slate-600 hover:text-slate-900 hover:bg-slate-50">Web Design & SEO</a>
+                <a href="./gtm-seo-content.html" class="block px-4 py-3 text-sm font-medium text-slate-600 hover:text-slate-900 hover:bg-slate-50 rounded-b-xl">Content Strategy</a>
+              </div>
+            </div>
+            
+            <a href="./contact.html" class="text-sm font-medium text-slate-600 hover:text-slate-900 transition-colors">Contact</a>
+          </nav>
+
+          <!-- CTA -->
+          <div class="flex items-center gap-3">
+            <a href="https://calendly.com/tahran-chowdhury/taku-media" class="hidden sm:inline-flex items-center gap-2 rounded-lg bg-white hover:bg-slate-50 text-slate-900 px-4 py-2.5 border border-slate-200 hover:border-slate-300 transition-all hover:shadow-[0_0_0_3px_rgba(15,23,42,0.05)]">
+              <svg xmlns="http://www.w3.org/2000/svg" class="lucide lucide-sparkles h-5 w-5 text-slate-700" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="m12 3-1.912 5.736a2 2 0 0 1-1.268 1.268L3 12l5.736 1.912a2 2 0 0 1 1.268 1.268L12 21l1.912-5.736a2 2 0 0 1 1.268-1.268L21 12l-5.736-1.912a2 2 0 0 1-1.268-1.268z"/></svg>
+              <span class="text-sm font-medium">Start a project</span>
+            </a>
+            <button aria-label="Open menu" class="md:hidden inline-flex items-center justify-center h-10 w-10 rounded-lg border border-slate-200 hover:border-slate-300 bg-white hover:bg-slate-50 transition-all">
+              <svg xmlns="http://www.w3.org/2000/svg" class="lucide lucide-menu h-5 w-5 text-slate-800" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 6h16"/><path d="M7 12h13"/><path d="M10 18h10"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Mobile Nav -->
+        <div class="md:hidden py-3 border-t border-slate-200">
+          <div class="flex items-center gap-6 overflow-x-auto no-scrollbar">
+            <a href="./index.html" class="shrink-0 text-sm font-medium text-slate-600 hover:text-slate-900 transition-colors">Home</a>
+            <a href="./index.html#services" class="shrink-0 text-sm font-medium text-slate-600 hover:text-slate-900 transition-colors">Services</a>
+            <a href="./contact.html" class="shrink-0 text-sm font-medium text-slate-600 hover:text-slate-900 transition-colors">Contact</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Proposal Content -->
+    <section class="py-20">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="max-w-3xl">
+          <a href="./index.html#services" class="inline-flex items-center gap-2 text-sm text-slate-600 hover:text-slate-900 transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" class="lucide lucide-arrow-left h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="m12 19-7-7 7-7"/><path d="M19 12H5"/></svg>
+            Back to Services
+          </a>
+          
+          <div class="mt-8 flex items-center justify-between">
+            <div class="inline-flex h-14 w-14 items-center justify-center rounded-xl bg-violet-50 border border-violet-200">
+              <svg xmlns="http://www.w3.org/2000/svg" class="lucide lucide-file-text h-7 w-7 text-violet-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></svg>
+            </div>
+            <span class="text-sm uppercase tracking-widest text-slate-500">Content Strategy Proposal</span>
+          </div>
+          
+          <h1 class="mt-6 text-4xl sm:text-5xl font-semibold tracking-tight text-slate-900">TI AMO ENTERTAINMENT Group</h1>
+          <p class="mt-4 text-lg text-slate-600">Content strategy proposal to increase social media activity and brand awareness.</p>
+          
+          <div class="mt-2 text-sm text-slate-500">
+            <p>Contact: (514) 239-7117</p>
+            <p>Website: <a href="https://tiamodisco.wixsite.com/tiamodj" class="text-violet-600 hover:text-violet-800" target="_blank">https://tiamodisco.wixsite.com/tiamodj</a></p>
+          </div>
+          
+          <div class="mt-10 prose prose-slate max-w-none">
+            <h2 class="mt-10 text-2xl font-semibold tracking-tight text-slate-900">1. Discovery & Goals</h2>
+            <p class="mt-4 text-slate-700">Before creating content, we want to understand why TI AMO wants to increase social media activity.</p>
+            
+            <h3 class="mt-6 text-xl font-semibold tracking-tight text-slate-900">Key questions:</h3>
+            <ul class="mt-4 space-y-2 text-slate-700">
+              <li class="flex items-start gap-2">
+                <span class="mt-2 inline-flex h-1.5 w-1.5 rounded-full bg-violet-500 flex-shrink-0"></span>
+                <span>Is the goal brand awareness — to make more people recognize TI AMO?</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="mt-2 inline-flex h-1.5 w-1.5 rounded-full bg-violet-500 flex-shrink-0"></span>
+                <span>Is it to book more events (weddings, clubs, corporate, etc.)?</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="mt-2 inline-flex h-1.5 w-1.5 rounded-full bg-violet-500 flex-shrink-0"></span>
+                <span>Do you want to showcase your DJs and event setups to build credibility?</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="mt-2 inline-flex h-1.5 w-1.5 rounded-full bg-violet-500 flex-shrink-0"></span>
+                <span>Is the goal to grow your online following or increase inquiries through Instagram/TikTok?</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="mt-2 inline-flex h-1.5 w-1.5 rounded-full bg-violet-500 flex-shrink-0"></span>
+                <span>Are there specific locations or audiences you want to reach (Montreal nightlife, wedding planners, etc.)?</span>
+              </li>
+            </ul>
+
+            <h2 class="mt-10 text-2xl font-semibold tracking-tight text-slate-900">2. Proposed Content Strategy</h2>
+            <p class="mt-4 text-slate-700">We propose focusing on short-form video content (Reels & TikToks), highlighting energy, visuals, and experience.</p>
+            
+            <h3 class="mt-6 text-xl font-semibold tracking-tight text-slate-900">Types of content:</h3>
+            <ul class="mt-4 space-y-2 text-slate-700">
+              <li class="flex items-start gap-2">
+                <span class="mt-2 inline-flex h-1.5 w-1.5 rounded-full bg-violet-500 flex-shrink-0"></span>
+                <span><strong class="font-medium text-slate-900">Event Highlights:</strong> Showcase the crowd, lighting, music, and DJ performance.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="mt-2 inline-flex h-1.5 w-1.5 rounded-full bg-violet-500 flex-shrink-0"></span>
+                <span><strong class="font-medium text-slate-900">Behind-the-Scenes:</strong> Setup, sound check, and prep moments.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="mt-2 inline-flex h-1.5 w-1.5 rounded-full bg-violet-500 flex-shrink-0"></span>
+                <span><strong class="font-medium text-slate-900">DJ Personality Clips:</strong> Fun, relatable moments with the team.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="mt-2 inline-flex h-1.5 w-1.5 rounded-full bg-violet-500 flex-shrink-0"></span>
+                <span><strong class="font-medium text-slate-900">Client Testimonials:</strong> Quick clips from happy couples or event organizers.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="mt-2 inline-flex h-1.5 w-1.5 rounded-full bg-violet-500 flex-shrink-0"></span>
+                <span><strong class="font-medium text-slate-900">Trend Adaptations:</strong> Reels/TikToks using trending sounds that match your vibe.</span>
+              </li>
+            </ul>
+            
+            <div class="mt-6 p-4 bg-violet-50 rounded-lg border border-violet-200">
+              <h4 class="font-medium text-slate-900">Tone & Style</h4>
+              <p class="mt-2 text-slate-700">High-energy, cinematic, modern — appealing to party-goers, event planners, and nightlife lovers.</p>
+            </div>
+
+            <h2 class="mt-10 text-2xl font-semibold tracking-tight text-slate-900">3. Production Plan</h2>
+            <ul class="mt-4 space-y-2 text-slate-700">
+              <li class="flex items-start gap-2">
+                <span class="mt-2 inline-flex h-1.5 w-1.5 rounded-full bg-violet-500 flex-shrink-0"></span>
+                <span><strong class="font-medium text-slate-900">Format:</strong> Vertical (9:16) optimized for TikTok, Instagram Reels, and YouTube Shorts.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="mt-2 inline-flex h-1.5 w-1.5 rounded-full bg-violet-500 flex-shrink-0"></span>
+                <span><strong class="font-medium text-slate-900">Filming:</strong> At live events or dedicated shoots.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="mt-2 inline-flex h-1.5 w-1.5 rounded-full bg-violet-500 flex-shrink-0"></span>
+                <span><strong class="font-medium text-slate-900">Editing:</strong> Fast cuts, dynamic captions, and branded motion graphics.</span>
+              </li>
+            </ul>
+
+            <h2 class="mt-10 text-2xl font-semibold tracking-tight text-slate-900">4. Examples</h2>
+            <p class="mt-4 text-slate-700">Examples of successful entertainment content strategies will be developed based on our initial discovery phase with TI AMO.</p>
+
+            <div class="mt-8 space-y-8">
+              <div>
+                <h3 class="text-lg font-medium text-slate-900 mb-4">Wedding Entertainment Content</h3>
+                
+                <!-- First TikTok Embed -->
+                <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@djwrex/video/7393127842554350879" data-video-id="7393127842554350879" style="max-width: 605px;min-width: 325px;" > <section> <a target="_blank" title="@djwrex" href="https://www.tiktok.com/@djwrex?refer=embed">@djwrex</a> Wedding Scratches Before Guests Arrive Pt. 189! 🔉🔉🔉 For booking visit synergyeventsco.com <a title="dj" target="_blank" href="https://www.tiktok.com/tag/dj?refer=embed">#dj</a> <a title="skratch" target="_blank" href="https://www.tiktok.com/tag/skratch?refer=embed">#skratch</a> <a title="skratchsociety" target="_blank" href="https://www.tiktok.com/tag/skratchsociety?refer=embed">#skratchsociety</a> <a title="theskratchsociety" target="_blank" href="https://www.tiktok.com/tag/theskratchsociety?refer=embed">#theskratchsociety</a> <a title="skratching" target="_blank" href="https://www.tiktok.com/tag/skratching?refer=embed">#skratching</a> <a title="scratch" target="_blank" href="https://www.tiktok.com/tag/scratch?refer=embed">#scratch</a> <a title="turntablist" target="_blank" href="https://www.tiktok.com/tag/turntablist?refer=embed">#turntablist</a> <a title="djing" target="_blank" href="https://www.tiktok.com/tag/djing?refer=embed">#djing</a> <a title="technics" target="_blank" href="https://www.tiktok.com/tag/technics?refer=embed">#technics</a> <a title="pioneerdj" target="_blank" href="https://www.tiktok.com/tag/pioneerdj?refer=embed">#pioneerdj</a> <a title="wedding" target="_blank" href="https://www.tiktok.com/tag/wedding?refer=embed">#wedding</a> <a title="weddings" target="_blank" href="https://www.tiktok.com/tag/weddings?refer=embed">#weddings</a> <a target="_blank" title="♬ original sound - DJ Wrex" href="https://www.tiktok.com/music/original-sound-7393127793267149599?refer=embed">♬ original sound - DJ Wrex</a> </section> </blockquote>
+                
+                <!-- Second TikTok Embed -->
+                <blockquote class="tiktok-embed mt-6" cite="https://www.tiktok.com/@shawn.thedj/video/7464941311099948331" data-video-id="7464941311099948331" style="max-width: 605px;min-width: 325px;" > <section> <a target="_blank" title="@shawn.thedj" href="https://www.tiktok.com/@shawn.thedj?refer=embed">@shawn.thedj</a> 5 must play songs for your wedding! <a title="dj" target="_blank" href="https://www.tiktok.com/tag/dj?refer=embed">#dj</a> <a title="weddings" target="_blank" href="https://www.tiktok.com/tag/weddings?refer=embed">#weddings</a> <a title="weddingsoftiktok" target="_blank" href="https://www.tiktok.com/tag/weddingsoftiktok?refer=embed">#weddingsoftiktok</a> <a title="weddingtok" target="_blank" href="https://www.tiktok.com/tag/weddingtok?refer=embed">#weddingtok</a> <a title="millennialsoftiktok" target="_blank" href="https://www.tiktok.com/tag/millennialsoftiktok?refer=embed">#millennialsoftiktok</a> <a title="bridetok" target="_blank" href="https://www.tiktok.com/tag/bridetok?refer=embed">#bridetok</a> <a title="weddings" target="_blank" href="https://www.tiktok.com/tag/weddings?refer=embed">#weddings</a> <a title="weddingtiktok" target="_blank" href="https://www.tiktok.com/tag/weddingtiktok?refer=embed">#weddingtiktok</a> <a title="greenvillesc" target="_blank" href="https://www.tiktok.com/tag/greenvillesc?refer=embed">#greenvillesc</a> <a title="weddinginspo" target="_blank" href="https://www.tiktok.com/tag/weddinginspo?refer=embed">#weddinginspo</a> <a title="weddingdj" target="_blank" href="https://www.tiktok.com/tag/weddingdj?refer=embed">#weddingdj</a> <a target="_blank" title="♬ original sound - DJ Shawn" href="https://www.tiktok.com/music/original-sound-7464941552994044718?refer=embed">♬ original sound - DJ Shawn</a> </section> </blockquote>
+                
+                <!-- Third TikTok Embed (Duplicate removed, adding a different one) -->
+                <blockquote class="tiktok-embed mt-6" cite="https://www.tiktok.com/@advantagedjs/video/7539825912729193748" data-video-id="7539825912729193748" style="max-width: 605px;min-width: 325px;" > <section> <a target="_blank" title="@advantagedjs" href="https://www.tiktok.com/@advantagedjs?refer=embed">@advantagedjs</a> Stop…wait a minute…did you just find a wedding dj that can mix? <a title="sydneyweddingdj" target="_blank" href="https://www.tiktok.com/tag/sydneyweddingdj?refer=embed">#sydneyweddingdj</a> <a title="weddingdj" target="_blank" href="https://www.tiktok.com/tag/weddingdj?refer=embed">#weddingdj</a> <a title="djtransition" target="_blank" href="https://www.tiktok.com/tag/djtransition?refer=embed">#djtransition</a> <a title="djmix" target="_blank" href="https://www.tiktok.com/tag/djmix?refer=embed">#djmix</a> <a target="_blank" title="♬ original sound - Advantage DJs" href="https://www.tiktok.com/music/original-sound-7539825966756186881?refer=embed">♬ original sound - Advantage DJs</a> </section> </blockquote>
+              </div>
+            </div>
+
+            <script async src="https://www.tiktok.com/embed.js"></script>
+
+            <h2 class="mt-10 text-2xl font-semibold tracking-tight text-slate-900">5. Pricing Plan</h2>
+            <p class="mt-4 text-slate-700">Based on our content strategy services, we offer the following packages:</p>
+          </div>
+
+          <!-- Pricing Cards (copied from gtm-seo-content.html) -->
+          <div class="mt-6 grid md:grid-cols-3 gap-6">
+            <!-- Starter Plan -->
+            <div class="rounded-2xl border border-slate-200 bg-white p-6">
+              <h3 class="text-xl font-semibold text-slate-900">Launch</h3>
+              <div class="mt-2 text-3xl font-bold text-slate-900">$500<span class="text-lg font-normal text-slate-600">/month</span></div>
+              <p class="mt-3 text-sm text-slate-600">Best for: Small businesses or solo creators testing video content.</p>
+              
+              <div class="mt-6 space-y-3">
+                <div class="flex items-start gap-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="lucide lucide-check h-5 w-5 text-violet-500 mt-0.5 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 6 9 17l-5-5"/></svg>
+                  <span class="text-sm text-slate-700">1 shoot per month (up to 5 hours)</span>
+                </div>
+                <div class="flex items-start gap-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="lucide lucide-check h-5 w-5 text-violet-500 mt-0.5 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 6 9 17l-5-5"/></svg>
+                  <span class="text-sm text-slate-700">2-8 short-form videos (Reels/TikToks up to 30s)</span>
+                </div>
+                <div class="flex items-start gap-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="lucide lucide-check h-5 w-5 text-violet-500 mt-0.5 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 6 9 17l-5-5"/></svg>
+                  <span class="text-sm text-slate-700"> Editing (captions, color correction, music)</span>
+                </div>
+                <div class="flex items-start gap-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="lucide lucide-check h-5 w-5 text-violet-500 mt-0.5 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 6 9 17l-5-5"/></svg>
+                  <span class="text-sm text-slate-700"> Content plan</span>
+                </div>
+              </div>
+              
+              <div class="mt-6 pt-6 border-t border-slate-200">
+                <h4 class="text-sm font-medium text-slate-900">Add-ons:</h4>
+                <ul class="mt-2 space-y-2 text-sm text-slate-600">
+                  <li class="flex justify-between">
+                    <span>$100/video for extra edits</span>
+                  </li>
+                  <li class="flex justify-between">
+                    <span>$50 for YouTube Shorts version</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            
+            <!-- Growth Plan -->
+            <div class="rounded-2xl border border-slate-200 bg-white p-6 ring-1 ring-violet-500/20 relative">
+              <div class="absolute top-0 right-0 -translate-y-1/2 translate-x-1/2 bg-violet-500 text-white text-xs font-medium px-3 py-1 rounded-full">Popular</div>
+              <h3 class="text-xl font-semibold text-slate-900">Growth</h3>
+              <div class="mt-2 text-3xl font-bold text-slate-900">$1,200<span class="text-lg font-normal text-slate-600">/month</span></div>
+              <p class="mt-3 text-sm text-slate-600">Best for: Businesses posting weekly video content.</p>
+              
+              <div class="mt-6 space-y-3">
+                <div class="flex items-start gap-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="lucide lucide-check h-5 w-5 text-violet-500 mt-0.5 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 6 9 17l-5-5"/></svg>
+                  <span class="text-sm text-slate-700">2 shoot sessions per month</span>
+                </div>
+                <div class="flex items-start gap-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="lucide lucide-check h-5 w-5 text-violet-500 mt-0.5 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 6 9 17l-5-5"/></svg>
+                  <span class="text-sm text-slate-700">6-15 edited videos (mix of 15–60 sec)</span>
+                </div>
+                <div class="flex items-start gap-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="lucide lucide-check h-5 w-5 text-violet-500 mt-0.5 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 6 9 17l-5-5"/></svg>
+                  <span class="text-sm text-slate-700">Hook + caption writing</span>
+                </div>
+                <div class="flex items-start gap-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="lucide lucide-check h-5 w-5 text-violet-500 mt-0.5 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 6 9 17l-5-5"/></svg>
+                  <span class="text-sm text-slate-700">Simple branding overlay (logo, color style)</span>
+                </div>
+                <div class="flex items-start gap-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="lucide lucide-check h-5 w-5 text-violet-500 mt-0.5 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 6 9 17l-5-5"/></svg>
+                  <span class="text-sm text-slate-700">Basic strategy & posting plan</span>
+                </div>
+              </div>
+              
+              <div class="mt-6 pt-6 border-t border-slate-200">
+                <h4 class="text-sm font-medium text-slate-900">Add-ons:</h4>
+                <ul class="mt-2 space-y-2 text-sm text-slate-600">
+                  <li class="flex justify-between">
+                    <span>$100/video for ad optimization</span>
+                  </li>
+                  <li class="flex justify-between">
+                    <span>$200 for 10 professional photos</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            
+            <!-- Pro Plan -->
+            <div class="rounded-2xl border border-slate-200 bg-white p-6">
+              <h3 class="text-xl font-semibold text-slate-900">Scale</h3>
+              <div class="mt-2 text-3xl font-bold text-slate-900">$2,000<span class="text-lg font-normal text-slate-600">/month</span></div>
+              <p class="mt-3 text-sm text-slate-600">Best for: Businesses wanting consistent, high-quality social presence.</p>
+              
+              <div class="mt-6 space-y-3">
+                <div class="flex items-start gap-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="lucide lucide-check h-5 w-5 text-violet-500 mt-0.5 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 6 9 17l-5-5"/></svg>
+                  <span class="text-sm text-slate-700">Up to 4 shoot sessions/month</span>
+                </div>
+                <div class="flex items-start gap-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="lucide lucide-check h-5 w-5 text-violet-500 mt-0.5 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 6 9 17l-5-5"/></svg>
+                  <span class="text-sm text-slate-700">12 edited videos (short-form + b-roll mix)</span>
+                </div>
+                <div class="flex items-start gap-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="lucide lucide-check h-5 w-5 text-violet-500 mt-0.5 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 6 9 17l-5-5"/></svg>
+                  <span class="text-sm text-slate-700">Full creative direction + scripting</span>
+                </div>
+                <div class="flex items-start gap-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="lucide lucide-check h-5 w-5 text-violet-500 mt-0.5 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 6 9 17l-5-5"/></svg>
+                  <span class="text-sm text-slate-700">Advanced editing (motion graphics, subtitles, transitions)</span>
+                </div>
+                <div class="flex items-start gap-2">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="lucide lucide-check h-5 w-5 text-violet-500 mt-0.5 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 6 9 17l-5-5"/></svg>
+                  <span class="text-sm text-slate-700">Monthly performance & strategy review</span>
+                </div>
+              </div>
+              
+              <div class="mt-6 pt-6 border-t border-slate-200">
+                <h4 class="text-sm font-medium text-slate-900">Add-ons:</h4>
+                <ul class="mt-2 space-y-2 text-sm text-slate-600">
+                  <li class="flex justify-between">
+                    <span>$250 for drone footage</span>
+                  </li>
+                  <li class="flex justify-between">
+                    <span>$300 for 1 long-form (YouTube-style) video</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>          
+
+          <div class="mt-12 pt-8 border-t border-slate-200">
+            <a href="https://calendly.com/tahran-chowdhury/taku-media" class="group inline-flex items-center gap-2 rounded-lg bg-violet-50 hover:bg-violet-100 text-violet-700 px-5 py-3 border border-violet-200 hover:border-violet-300 transition-all hover:shadow-[0_0_0_4px_rgba(167,139,250,0.10)]">
+              <span class="text-sm font-medium">Schedule a Discovery Call</span>
+              <svg xmlns="http://www.w3.org/2000/svg" class="lucide lucide-arrow-right h-5 w-5 group-hover:translate-x-1 transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="py-20 bg-slate-50">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="grid lg:grid-cols-2 gap-10 items-start">
+          <div>
+            <h2 class="text-3xl sm:text-4xl font-semibold tracking-tight text-slate-900">Ready to elevate TI AMO's social presence?</h2>
+            <p class="mt-3 text-sm text-slate-600">Let's discuss how our content strategy can help you reach more clients and build your brand.</p>
+
+            <div class="mt-8 space-y-4">
+              <div class="flex items-center gap-3">
+                <span class="inline-flex h-10 w-10 items-center justify-center rounded-lg bg-white border border-slate-200">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="lucide lucide-mail h-5 w-5 text-slate-800" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16v16H4z"/><path d="m22 6-10 7L2 6"/></svg>
+                </span>
+                <a href="mailto:hello@taku-media.com" class="text-sm text-slate-700 hover:text-slate-900 transition-colors">hello@taku-media.com</a>
+              </div>
+            </div>
+            </div>
+          </div>
+
+          <!-- Form -->
+          <form action="#" method="POST" data-netlify="true" class="rounded-2xl border border-slate-200 bg-white p-6 md:p-8 mt-8">
+            <div class="grid sm:grid-cols-2 gap-4">
+              <div>
+                <label for="name" class="block text-xs text-slate-600 mb-2">Name</label>
+                <input id="name" name="name" type="text" placeholder="Your name" class="w-full rounded-lg bg-white border border-slate-300 px-3 py-2.5 text-sm text-slate-900 placeholder:text-slate-400 focus:outline-none focus:border-violet-300 focus:ring-2 focus:ring-violet-200 transition-all" />
+              </div>
+              <div>
+                <label for="email" class="block text-xs text-slate-600 mb-2">Email</label>
+                <input id="email" name="email" type="email" placeholder="you@company.com" class="w-full rounded-lg bg-white border border-slate-300 px-3 py-2.5 text-sm text-slate-900 placeholder:text-slate-400 focus:outline-none focus:border-violet-300 focus:ring-2 focus:ring-violet-200 transition-all" />
+              </div>
+              <div class="sm:col-span-2">
+                <label for="company" class="block text-xs text-slate-600 mb-2">Company</label>
+                <input id="company" name="company" type="text" placeholder="TI AMO ENTERTAINMENT" class="w-full rounded-lg bg-white border border-slate-300 px-3 py-2.5 text-sm text-slate-900 placeholder:text-slate-400 focus:outline-none focus:border-violet-300 focus:ring-2 focus:ring-violet-200 transition-all" />
+              </div>
+              <div class="sm:col-span-2">
+                <label for="message" class="block text-xs text-slate-600 mb-2">Project details</label>
+                <textarea id="message" name="message" rows="4" placeholder="Tell us about your goals for TI AMO..." class="w-full rounded-lg bg-white border border-slate-300 px-3 py-2.5 text-sm text-slate-900 placeholder:text-slate-400 focus:outline-none focus:border-violet-300 focus:ring-2 focus:ring-violet-200 transition-all"></textarea>
+              </div>
+            </div>
+            <div class="mt-6 flex items-center justify-between">
+              <div class="text-xs text-slate-500">We reply within 24 hours.</div>
+              <button type="submit" class="inline-flex items-center gap-2 rounded-lg bg-violet-50 hover:bg-violet-100 text-violet-700 px-5 py-2.5 border border-violet-200 hover:border-violet-300 transition-all hover:shadow-[0_0_0_4px_rgba(167,139,250,0.10)]">
+                Send
+                <svg xmlns="http://www.w3.org/2000/svg" class="lucide lucide-send h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="m22 2-7 20-4-9-9-4Z"/><path d="M22 2 11 13"/></svg>
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-slate-200 py-10">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+          <a href="./index.html#home" class="flex items-center space-x-3 group">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-code2 h-6 w-6 text-cyan-600 group-hover:text-cyan-500 transition-colors">
+              <path d="m18 16 4-4-4-4"></path>
+              <path d="m6 8-4 4 4 4"></path>
+              <path d="m14.5 4-5 16"></path>
+            </svg>
+            <span class="text-base tracking-tight" style="font-family: 'Segoe UI Black','Segoe UI',ui-sans-serif,system-ui,-apple-system,Roboto,Arial,sans-serif; font-weight: 900;">
+              Taku Media
+            </span>
+          </a>
+          <div class="flex items-center gap-6 text-sm text-slate-600">
+            <a href="https://calendly.com/tahran-chowdhury/taku-media" class="hover:text-slate-900 transition-colors">Privacy</a>
+            <a href="https://calendly.com/tahran-chowdhury/taku-media" class="hover:text-slate-900 transition-colors">Terms</a>
+            <a href="https://calendly.com/tahran-chowdhury/taku-media" class="hover:text-slate-900 transition-colors">Careers</a>
+            <div class="flex items-center gap-3">
+              <a href="https://www.facebook.com/people/Taku-Media/61583154091698/" aria-label="Facebook" class="inline-flex h-9 w-9 items-center justify-center rounded-lg border border-slate-200 hover:border-slate-300 bg-white hover:bg-slate-50 transition-all">
+                <svg xmlns="http://www.w3.org/2000/svg" class="lucide lucide-facebook h-4.5 w-4.5 text-slate-700" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+              </a>
+              <a href="https://www.linkedin.com/company/taku-media" aria-label="LinkedIn" class="inline-flex h-9 w-9 items-center justify-center rounded-lg border border-slate-200 hover:border-slate-300 bg-white hover:bg-slate-50 transition-all">
+                <svg xmlns="http://www.w3.org/2000/svg" class="lucide lucide-linkedin h-4.5 w-4.5 text-slate-700" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+              </a>
+              <a href="https://calendly.com/tahran-chowdhury/taku-media" aria-label="Twitter" class="inline-flex h-9 w-9 items-center justify-center rounded-lg border border-slate-200 hover:border-slate-300 bg-white hover:bg-slate-50 transition-all">
+                <svg xmlns="http://www.w3.org/2000/svg" class="lucide lucide-twitter h-4.5 w-4.5 text-slate-700" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 4s-.7 2.1-2 3.2c1.6 10-9.3 17.3-18 9.7 2.2.2 4.4-.6 6-2C3 13 .5 8.5 2 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="mt-6 text-xs text-slate-500">© <span id="y">2025</span> Taku Media. All rights reserved.</div>
+      </div>
+    </footer>
+  </body>
+</html>
