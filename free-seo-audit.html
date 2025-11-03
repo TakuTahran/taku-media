@@ -238,11 +238,8 @@
     
     <script>
       document.getElementById('seoAuditForm').addEventListener('submit', function(e) {
-        e.preventDefault();
-        
-        // Show loading state
-        document.getElementById('seoAuditForm').classList.add('hidden');
-        document.getElementById('loadingState').classList.remove('hidden');
+        // Don't prevent default - let Netlify handle form submission
+        // But we'll also call our API to get the audit results
         
         // Get form data
         const formData = new FormData(this);
@@ -251,59 +248,44 @@
         const cellphone = formData.get('cellphone');
         const email = formData.get('email');
         
-        // Use Google PageSpeed Insights API for real SEO analysis
-        const pagespeedUrl = `https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=${encodeURIComponent(website)}&category=performance&category=seo&category=accessibility&category=best-practices&strategy=mobile`;
+        // Show loading state
+        document.getElementById('seoAuditForm').classList.add('hidden');
+        document.getElementById('loadingState').classList.remove('hidden');
         
-        fetch(pagespeedUrl)
-          .then(response => {
-            if (!response.ok) {
-              // If we get a rate limit error, fall back to simulated audit
-              if (response.status === 429) {
-                throw new Error('RATE_LIMIT');
-              }
-              throw new Error('API_ERROR');
-            }
-            return response.json();
+        // Call our backend function to get real audit data
+        fetch('/.netlify/functions/seo-audit', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            name: name,
+            website: website,
+            cellphone: cellphone,
+            email: email
           })
-          .then(data => {
-            // Process PageSpeed data to generate SEO score and insights
-            const performanceScore = Math.round(data.lighthouseResult.categories.performance.score * 100);
-            const seoScore = Math.round(data.lighthouseResult.categories.seo.score * 100);
-            const accessibilityScore = Math.round(data.lighthouseResult.categories.accessibility.score * 100);
-            const bestPracticesScore = Math.round(data.lighthouseResult.categories['best-practices'].score * 100);
-            
-            // Calculate overall score (weighted average)
-            const overallScore = Math.round(
-              (performanceScore * 0.3) + 
-              (seoScore * 0.4) + 
-              (accessibilityScore * 0.15) + 
-              (bestPracticesScore * 0.15)
-            );
-            
-            // Hide loading state and show results
-            document.getElementById('loadingState').classList.add('hidden');
-            document.getElementById('resultsState').classList.remove('hidden');
-            
-            // Display actual SEO score from PageSpeed API
-            document.getElementById('seoScore').textContent = overallScore + '/100';
-          })
-          .catch(error => {
-            // Handle rate limiting or API errors with fallback to simulated audit
-            console.error('Error:', error);
-            
-            // Hide loading state and show results
-            document.getElementById('loadingState').classList.add('hidden');
-            document.getElementById('resultsState').classList.remove('hidden');
-            
-            // Generate a random SEO score between 40-90 for demo purposes when API fails
-            const randomScore = Math.floor(Math.random() * 51) + 40;
-            document.getElementById('seoScore').textContent = randomScore + '/100';
-            
-            // In a production environment, you might want to:
-            // 1. Log this error to your backend
-            // 2. Notify admins about rate limiting issues
-            // 3. Implement a queue system for processing audits
-          });
+        })
+        .then(response => response.json())
+        .then(data => {
+          // Hide loading state and show results
+          document.getElementById('loadingState').classList.add('hidden');
+          document.getElementById('resultsState').classList.remove('hidden');
+          
+          // Display all individual scores
+          document.getElementById('seoScore').textContent = data.score + '/100';
+          document.getElementById('performanceScore').textContent = data.performance + '/100';
+          document.getElementById('seoDetailScore').textContent = data.seo + '/100';
+          document.getElementById('accessibilityScore').textContent = data.accessibility + '/100';
+          document.getElementById('bestPracticesScore').textContent = data.bestPractices + '/100';
+        })
+        .catch(error => {
+          console.error('Error:', error);
+          // Even if we can't get the audit, we still want to show success
+          // since the form submission to Netlify worked
+          document.getElementById('loadingState').classList.add('hidden');
+          document.getElementById('resultsState').classList.remove('hidden');
+          document.getElementById('seoScore').textContent = 'Audit in progress';
+        });
       });
     </script>
   </body>
