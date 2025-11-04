@@ -1,0 +1,18 @@
+{
+  "name": "taku-media",
+  "version": "1.0.0",
+  "description": "Taku Media website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/taku-media/taku-media.git"
+  },
+  "author": "Taku Media",
+  "license": "MIT",
+  "dependencies": {
+    "node-fetch": "^2.6.7"
+  }
+}

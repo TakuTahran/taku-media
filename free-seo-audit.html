@@ -100,6 +100,7 @@
         <div class="mt-12 max-w-2xl mx-auto">
           <div class="rounded-2xl border border-slate-200 bg-white p-6 md:p-8">
             <form id="seoAuditForm" class="space-y-6" data-netlify="true">
+              <input type="hidden" name="form-name" value="seo-audit" />
               <div>
                 <label for="name" class="block text-xs text-slate-600 mb-2">Full Name <span class="text-red-500">*</span></label>
                 <input id="name" name="name" type="text" placeholder="Your full name" required class="w-full rounded-lg bg-white border border-slate-300 px-3 py-2.5 text-sm text-slate-900 placeholder:text-slate-400 focus:outline-none focus:border-cyan-300 focus:ring-2 focus:ring-cyan-200 transition-all" />
@@ -356,16 +357,13 @@
         document.getElementById('loadingState').classList.remove('hidden');
         
         // Call our backend function to get real audit data
-        fetch('/.netlify/functions/seo-audit', {
+        fetch('/api/seo-audit', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
           },
           body: JSON.stringify({
-            name: name,
-            website: website,
-            cellphone: cellphone,
-            email: email
+            website: website
           })
         })
         .then(response => response.json())
@@ -380,6 +378,18 @@
           document.getElementById('seoDetailScore').textContent = data.seo + '/100';
           document.getElementById('accessibilityScore').textContent = data.accessibility + '/100';
           document.getElementById('bestPracticesScore').textContent = data.bestPractices + '/100';
+          
+          // Update progress bars
+          document.getElementById('performanceBar').style.width = data.performance + '%';
+          document.getElementById('seoBar').style.width = data.seo + '%';
+          document.getElementById('accessibilityBar').style.width = data.accessibility + '%';
+          document.getElementById('bestPracticesBar').style.width = data.bestPractices + '%';
+          
+          // Update ratings text
+          document.getElementById('performanceRating').textContent = getRatingText(data.performance);
+          document.getElementById('seoRating').textContent = getRatingText(data.seo);
+          document.getElementById('accessibilityRating').textContent = getRatingText(data.accessibility);
+          document.getElementById('bestPracticesRating').textContent = getRatingText(data.bestPractices);
         })
         .catch(error => {
           console.error('SEO Audit Error:', error);
@@ -390,6 +400,14 @@
           document.getElementById('seoScore').textContent = 'Audit in progress';
         });
       };
+      
+      function getRatingText(score) {
+        if (score >= 90) return 'Excellent';
+        if (score >= 70) return 'Good';
+        if (score >= 50) return 'Average';
+        if (score >= 30) return 'Poor';
+        return 'Very Poor';
+      }
 
       document.getElementById("seoAuditForm").addEventListener("submit", handleSubmit);
     </script>

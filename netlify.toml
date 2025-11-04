@@ -1,0 +1,24 @@
+[build]
+  publish = "."
+  command = "npm install"
+
+[functions]
+  directory = "netlify/functions"
+
+# Redirects for SPA
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# Function redirects
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/:splat"
+  status = 200
+
+# Form submission settings
+[[headers]]
+  for = "/free-seo-audit.html"
+  [headers.values]
+    cache-control = "public, max-age=0, must-revalidate"
