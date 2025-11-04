@@ -99,7 +99,7 @@
 
         <div class="mt-12 max-w-2xl mx-auto">
           <div class="rounded-2xl border border-slate-200 bg-white p-6 md:p-8">
-            <form id="seoAuditForm" class="space-y-6" data-netlify="true" method="POST">
+            <form id="seoAuditForm" class="space-y-6" data-netlify="true" method="POST" name="seo-audit">
               <input type="hidden" name="form-name" value="seo-audit" />
               <div>
                 <label for="name" class="block text-xs text-slate-600 mb-2">Full Name <span class="text-red-500">*</span></label>
@@ -131,6 +131,14 @@
               <p class="text-xs text-slate-500 text-center pt-4">
                 By submitting, you agree to receive your SEO report and occasional marketing updates from Taku Media.
               </p>
+            </form>
+            
+            <!-- Hidden form for Netlify detection -->
+            <form name="seo-audit" data-netlify="true" hidden>
+              <input type="text" name="name" />
+              <input type="url" name="website" />
+              <input type="tel" name="cellphone" />
+              <input type="email" name="email" />
             </form>
             
             <!-- Loading State -->
@@ -327,6 +335,7 @@
     
     <script>
       const handleSubmit = event => {
+        // Prevent default to handle form submission manually
         event.preventDefault();
 
         const myForm = event.target;
