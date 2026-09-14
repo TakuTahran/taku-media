@@ -1,0 +1,54 @@
+---
+slug: business-intelligence
+category: operations
+title: "Business intelligence"
+h1: "Plain-language querying of company data"
+metaTitle: "AI business intelligence Montreal | Taku-Media"
+metaDescription: "Ask business questions in plain language against data you already store. Guardrails included."
+primaryKeyword: "AI business intelligence Montreal"
+secondaryKeywords:
+  - plain language BI Montreal
+  - AI analytics Quebec
+searchIntent: commercial-investigation
+summary: "Ask business questions in plain language against data you already store."
+tools:
+  - Metabase
+  - Power BI
+  - Claude
+relatedServices:
+  - ai-bookkeeping
+  - workflow-automation
+  - ai-strategy
+priceFrom: null
+published: true
+---
+
+AI business intelligence Montreal teams want is usually one sentence: answer the question without waiting on a analyst export. That only works when definitions are shared and the warehouse or warehouse-lite is trustworthy.
+
+## A concrete BI workflow
+
+1. Agree metric definitions in writing (revenue, active client, churn).
+2. Connect a governed dataset, not every spreadsheet on the shared drive.
+3. Add a question interface with row-level limits and logged queries.
+4. Route ambiguous answers to a human analyst tag, not a fake confident number.
+5. Publish a short catalog of approved questions so people reuse known-good prompts.
+
+We implement on tools like Metabase or Power BI, sometimes with an LLM layer for phrasing. We do not invent a new analytics product.
+
+## Worked example: "Which clients are quiet?"
+
+Leadership asked weekly which retainers had gone dark. The answer lived in project tool last-activity dates plus unpaid invoice aging, previously stitched by hand.
+
+We defined "quiet" as no billable activity in 14 days and no open ticket, then exposed a saved question. The LLM layer helps staff rephrase, but the metric stays fixed. When someone asks something undefined, the system says it cannot answer rather than improvising.
+
+## Constraint and tradeoff
+
+Natural language on dirty data produces confident nonsense. Cleaning and defining metrics is most of the work. If that cleanup is refused, we will recommend classic dashboards only.
+
+Access control is the other tradeoff. Opening payroll-adjacent tables to a chat interface is a governance failure. We will block scopes rather than ship a demo that looks clever.
+
+## Time and cost range
+
+{/* TODO(tahran): confirm BI engagement range */}
+
+A thin slice (one governed dataset, five approved questions) often lands in two to five weeks. Broader rollouts need [AI strategy](/en/services/foundation/ai-strategy) first. When the source data is financial, coordinate with [AI bookkeeping](/en/services/operations/ai-bookkeeping). When feeds are the bottleneck, start with [workflow automation](/en/services/operations/workflow-automation).

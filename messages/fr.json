@@ -1,0 +1,77 @@
+{
+  "about": {
+    "body": "Nous nous concentrons sur des systèmes que le personnel utilisera vraiment: automatisations entre applications déjà payées, assistants support et vente avec règles de transfert claires, et rapports qui répondent aux questions d'affaires en langage simple.",
+    "cta": "Réserver un appel",
+    "intro": "Taku-Media est une pratique de conseil en IA basée à Montréal. Nous aidons les opérateurs à intégrer des outils d'IA dans des flux réels.",
+    "title": "À propos de Taku-Media"
+  },
+  "common": {
+    "learnMore": "En savoir plus",
+    "loading": "Chargement",
+    "viewAll": "Tout voir"
+  },
+  "contact": {
+    "bookingLabel": "Réserver un appel",
+    "emailLabel": "Courriel",
+    "embedNote": "Vous préférez un calendrier? Utilisez le planificateur ci-dessous.",
+    "intro": "Réservez un appel ou écrivez-nous. Nous répondons pendant les heures ouvrables, heure de l'Est.",
+    "title": "Contact"
+  },
+  "directory": {
+    "empty": "Aucune entreprise listée pour le moment.",
+    "featuredLabel": "Propriétaire du site",
+    "intro": "Un répertoire de travail des firmes liées à l'IA à Montréal. Les entrées sont fournies par les opérateurs de ce site. Taku-Media apparaît en premier parce que nous maintenons la liste, indiqué comme propriétaire du site.",
+    "placeholderLabel": "Exemple",
+    "title": "Consultants et entreprises d'IA à Montréal"
+  },
+  "footer": {
+    "company": "Entreprise",
+    "connect": "Coordonnées",
+    "napTodo": "Adresse et téléphone à confirmer.",
+    "rights": "Tous droits réservés.",
+    "services": "Services",
+    "tagline": "Mise en œuvre et intégration de l'IA pour les entreprises montréalaises."
+  },
+  "home": {
+    "brand": "Taku-Media",
+    "cta": "Réserver un appel",
+    "headline": "De l'IA adaptée à la façon dont votre entreprise fonctionne déjà.",
+    "sectionAreas": "02 Domaines",
+    "sectionAreasTitle": "Où nous passons notre temps.",
+    "sectionCta": "03 Prochaine étape",
+    "sectionCtaBody": "Un court appel suffit pour voir si nous pouvons aider. Apportez le flux qui fait perdre le plus de temps.",
+    "sectionCtaTitle": "Dites-nous ce qui coince.",
+    "sectionPractice": "01 Pratique",
+    "sectionPracticeBody": "La plupart des projets d'IA bloquent sur l'intégration: outils déconnectés, propriété floue, flux auxquels personne ne fait confiance. Nous branchons les outils que vous utilisez déjà, ou en recommandons d'autres, puis vous laissons capables de les faire tourner.",
+    "sectionPracticeTitle": "Mise en œuvre, pas de promesse vague.",
+    "supporting": "Nous intégrons des outils d'IA tiers pour les opérateurs à Montréal. Stratégie, branchement, formation. Pas une autre plateforme à acheter."
+  },
+  "meta": {
+    "siteName": "Taku-Media",
+    "tagline": "Conseil en IA pour les entreprises de Montréal"
+  },
+  "nav": {
+    "about": "À propos",
+    "bookCall": "Réserver un appel",
+    "closeMenu": "Fermer le menu",
+    "contact": "Contact",
+    "directory": "IA à Montréal",
+    "language": "Langue",
+    "openMenu": "Ouvrir le menu",
+    "services": "Services",
+    "skipToContent": "Aller au contenu"
+  },
+  "services": {
+    "allCategories": "Toutes les catégories",
+    "backToHub": "Tous les services",
+    "bookCta": "Réserver un appel",
+    "categoryEmpty": "Aucun service publié dans cette catégorie pour le moment.",
+    "foundation": "Fondations",
+    "hubIntro": "Mise en œuvre et intégration autour d'outils d'IA tiers. Nous ne construisons pas les plateformes sous-jacentes.",
+    "hubTitle": "Services",
+    "priceFrom": "À partir de",
+    "related": "Services liés",
+    "tools": "Outils",
+    "unpublished": "Cette page n'est pas encore publiée."
+  }
+}

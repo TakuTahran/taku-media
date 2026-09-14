@@ -1,0 +1,34 @@
+{
+  "companies": [
+    {
+      "id": "taku-media",
+      "name": "Taku-Media",
+      "website": "https://taku-media.com",
+      "summary": "AI consulting practice focused on implementation and integration for Montreal operators.",
+      "categories": ["consulting", "implementation"],
+      "featured": true,
+      "isSiteOwner": true,
+      "placeholder": false
+    },
+    {
+      "id": "placeholder-alpha",
+      "name": "Example Co. Alpha (placeholder)",
+      "website": "",
+      "summary": "Placeholder entry. Replace with a real Montreal AI company when you supply verified data.",
+      "categories": ["placeholder"],
+      "featured": false,
+      "isSiteOwner": false,
+      "placeholder": true
+    },
+    {
+      "id": "placeholder-beta",
+      "name": "Example Co. Beta (placeholder)",
+      "website": "",
+      "summary": "Placeholder entry. Do not treat as a real listing. Supply name, URL, and summary before publishing.",
+      "categories": ["placeholder"],
+      "featured": false,
+      "isSiteOwner": false,
+      "placeholder": true
+    }
+  ]
+}

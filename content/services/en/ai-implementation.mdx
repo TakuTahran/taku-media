@@ -1,0 +1,56 @@
+---
+slug: ai-implementation
+category: foundation
+title: "AI implementation"
+h1: "AI implementation that wires tools into daily work"
+metaTitle: "AI implementation Montreal | Taku-Media"
+metaDescription: "Hands-on integration of selected AI tools into the workflows your team already runs."
+primaryKeyword: "AI implementation Montreal"
+secondaryKeywords:
+  - AI integration Montreal
+  - AI rollout Quebec
+searchIntent: commercial-investigation
+summary: "Hands-on integration of selected AI tools into the workflows your team already runs."
+tools:
+  - n8n
+  - Vendor APIs
+  - SOPs
+relatedServices:
+  - ai-strategy
+  - ai-training
+  - workflow-automation
+priceFrom: null
+published: true
+---
+
+AI implementation Montreal projects fail when the model works in a sandbox and dies in the Tuesday afternoon queue. We treat implementation as wiring: accounts, permissions, prompts or agents with owners, and a rollback path.
+
+## A concrete implementation workflow
+
+1. Freeze the pilot scope in writing (one workflow, one success metric, named owners).
+2. Connect identity and data access with least privilege.
+3. Build the happy path, then the failure path (timeouts, empty fields, bad model output).
+4. Shadow mode for a defined window: AI drafts, humans send.
+5. Cut over with an SOP and a person who can disable the flow without calling us at midnight.
+
+We implement around third-party tools. We are not shipping a proprietary platform you must rent forever.
+
+## Worked example: CRM notes to follow-up drafts
+
+Sales logged calls inconsistently. Managers could not coach from empty notes.
+
+We added a post-call step: transcript in, structured note fields out, optional follow-up email draft in the CRM. Reps edit before send. After two weeks of shadow mode, empty-note rate dropped because the default path was easier than skipping.
+
+The hard part was field mapping and permission scopes, not the model. That is typical.
+
+## Constraint and tradeoff
+
+Shadow mode costs parallel effort. Skipping it to "move faster" usually means a public mistake and a trust reset that takes longer than the shadow period would have.
+
+Vendor lock-in is another tradeoff. Deep custom work inside one SaaS is faster short term and painful when pricing or features shift. We document exit assumptions when we touch [workflow automation](/en/services/operations/workflow-automation) layers.
+
+## Time and cost range
+
+{/* TODO(tahran): confirm implementation bands */}
+
+A single-workflow implementation often runs two to six weeks depending on API quality and stakeholder availability. Larger rollouts need an [AI strategy](/en/services/foundation/ai-strategy) pass first and [AI training](/en/services/foundation/ai-training) so the team does not invent shadow IT prompts.

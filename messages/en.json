@@ -1,0 +1,77 @@
+{
+  "about": {
+    "body": "We focus on systems that staff will actually use: automations between apps you already pay for, support and sales assistants with clear handoff rules, and reporting that answers business questions in plain language.",
+    "cta": "Book a call",
+    "intro": "Taku-Media is an AI consulting practice based in Montreal. We help operators implement and integrate AI tools into real workflows.",
+    "title": "About Taku-Media"
+  },
+  "common": {
+    "learnMore": "Learn more",
+    "loading": "Loading",
+    "viewAll": "View all"
+  },
+  "contact": {
+    "bookingLabel": "Book a call",
+    "emailLabel": "Email",
+    "embedNote": "Prefer a calendar? Use the scheduler below.",
+    "intro": "Book a call or email us. We reply during business hours, Eastern Time.",
+    "title": "Contact"
+  },
+  "directory": {
+    "empty": "No companies listed yet.",
+    "featuredLabel": "Site owner",
+    "intro": "A working directory of AI-related firms in Montreal. Entries are supplied by operators of this site. Taku-Media appears first because we maintain the list, labeled as the site owner.",
+    "placeholderLabel": "Placeholder",
+    "title": "AI consultants and companies in Montreal"
+  },
+  "footer": {
+    "company": "Company",
+    "connect": "Connect",
+    "napTodo": "Address and phone pending confirmation.",
+    "rights": "All rights reserved.",
+    "services": "Services",
+    "tagline": "AI implementation and integration for Montreal businesses."
+  },
+  "home": {
+    "brand": "Taku-Media",
+    "cta": "Book a call",
+    "headline": "AI that fits how your business already works.",
+    "sectionAreas": "02 Focus areas",
+    "sectionAreasTitle": "Where we spend our time.",
+    "sectionCta": "03 Next step",
+    "sectionCtaBody": "A short call is enough to see whether we can help. Bring the workflow that wastes the most time.",
+    "sectionCtaTitle": "Tell us what is broken.",
+    "sectionPractice": "01 Practice",
+    "sectionPracticeBody": "Most AI projects stall on integration: disconnected tools, unclear ownership, and workflows nobody trusts. We wire the tools you already use, or recommend ones that fit, then leave you able to run them.",
+    "sectionPracticeTitle": "Implementation, not vapourware.",
+    "supporting": "We implement and integrate third-party AI tools for Montreal operators. Strategy, wiring, training. Not another platform to buy."
+  },
+  "meta": {
+    "siteName": "Taku-Media",
+    "tagline": "AI consulting for Montreal operators"
+  },
+  "nav": {
+    "about": "About",
+    "bookCall": "Book a call",
+    "closeMenu": "Close menu",
+    "contact": "Contact",
+    "directory": "AI in Montreal",
+    "language": "Language",
+    "openMenu": "Open menu",
+    "services": "Services",
+    "skipToContent": "Skip to content"
+  },
+  "services": {
+    "allCategories": "All categories",
+    "backToHub": "All services",
+    "bookCta": "Book a call",
+    "categoryEmpty": "No published services in this category yet.",
+    "foundation": "Foundation",
+    "hubIntro": "Implementation and integration around third-party AI tools. We do not build the underlying platforms.",
+    "hubTitle": "Services",
+    "priceFrom": "From",
+    "related": "Related services",
+    "tools": "Tools",
+    "unpublished": "This page is not published yet."
+  }
+}
