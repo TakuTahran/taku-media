@@ -1,0 +1,5 @@
+# Git-triggered builds have no command in the Netlify UI, so set it here;
+# Netlify's Next.js runtime is applied automatically for this framework.
+[build]
+  command = "npm run build"
+  publish = ".next"
