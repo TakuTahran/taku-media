@@ -1,263 +1,133 @@
 "use client";
 
-import { useEffect, useId, useRef, useState } from "react";
-import { useTranslations, useLocale } from "next-intl";
+import { useEffect, useState } from "react";
+import { useLocale, useTranslations } from "next-intl";
 import { Link, usePathname } from "@/i18n/navigation";
-import { BOOKING_URL } from "@/lib/constants";
-import { categories, type CategoryMeta } from "@/content/categories";
 
-type NavService = {
-  id: string;
-  slug: string;
-  title: string;
-  category: string;
-  summary: string;
+const SECTIONS = ["overhaul", "mobile", "process", "pricing", "faq"] as const;
+const SECTION_IDS: Record<(typeof SECTIONS)[number], string> = {
+  overhaul: "vibe-hardening",
+  mobile: "mobile",
+  process: "process",
+  pricing: "pricing",
+  faq: "faq",
 };
+// Count bubble on the pricing link, matching the three sprint tiers.
+const PRICING_COUNT = 3;
 
-type MegaMenuProps = {
-  services: NavService[];
-};
+// Decorative barcode mark next to the logo; bar widths in px.
+const BARS = [2, 1, 3, 1, 1, 2, 3, 1, 2, 1, 1, 3, 2, 1];
 
-export function SiteHeader({ services }: MegaMenuProps) {
-  const pathname = usePathname();
-  return <SiteHeaderChrome key={pathname} services={services} />;
-}
-
-function SiteHeaderChrome({ services }: MegaMenuProps) {
+export function SiteHeader() {
   const t = useTranslations("nav");
-  const locale = useLocale();
-  const [open, setOpen] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
-  const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
-  const panelId = useId();
-  const panelRef = useRef<HTMLDivElement>(null);
-  const triggerRef = useRef<HTMLButtonElement>(null);
-
-  useEffect(() => {
-    if (!open || !panelRef.current) return;
-    const panel = panelRef.current;
-    const focusables = panel.querySelectorAll<HTMLElement>(
-      "a[href], button:not([disabled])",
-    );
-    const first = focusables[0];
-    const last = focusables[focusables.length - 1];
-
-    function onTab(e: KeyboardEvent) {
-      if (e.key !== "Tab" || focusables.length === 0) return;
-      if (e.shiftKey && document.activeElement === first) {
-        e.preventDefault();
-        last?.focus();
-      } else if (!e.shiftKey && document.activeElement === last) {
-        e.preventDefault();
-        first?.focus();
-      }
-    }
-
-    panel.addEventListener("keydown", onTab);
-    return () => panel.removeEventListener("keydown", onTab);
-  }, [open]);
 
   useEffect(() => {
     function onKey(e: KeyboardEvent) {
-      if (e.key === "Escape") {
-        setOpen(false);
-        setMobileOpen(false);
-        triggerRef.current?.focus();
-      }
+      if (e.key === "Escape") setMobileOpen(false);
     }
     document.addEventListener("keydown", onKey);
     return () => document.removeEventListener("keydown", onKey);
   }, []);
 
-  useEffect(() => {
-    if (!open && !mobileOpen) return;
-    const prev = document.body.style.overflow;
-    if (mobileOpen) document.body.style.overflow = "hidden";
-    return () => {
-      document.body.style.overflow = prev;
-    };
-  }, [open, mobileOpen]);
-
-  function servicesForCategory(cat: CategoryMeta) {
-    return services.filter((s) => s.category === cat.id);
-  }
-
   return (
-    <header className="relative z-40 border-b border-[var(--rule-strong)] bg-[var(--paper)]">
+    <header className="sticky top-0 z-50 bg-[var(--paper)]/85 backdrop-blur-md">
       <a
         href="#main"
-        className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:bg-[var(--surface)] focus:px-3 focus:py-2"
+        className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:rounded-full focus:bg-[var(--ink)] focus:px-4 focus:py-2 focus:text-white"
       >
         {t("skipToContent")}
       </a>
-      <div className="site-grid">
-        <div className="flex h-16 items-center justify-between gap-4">
-          <Link
-            href="/"
-            className="text-[length:var(--text-md)] font-medium text-[var(--ink)] no-underline"
-          >
-            Taku-Media
+      <div className="site-grid flex h-16 items-center justify-between gap-6">
+        <div className="flex items-center gap-6">
+          <Link href="/" className="text-[19px] font-semibold tracking-[-0.04em]">
+            Taku-Media<sup className="ml-0.5 text-[10px]">®</sup>
           </Link>
+          <span className="hidden items-center gap-2.5 md:flex" aria-hidden="true">
+            <span className="flex h-6 items-stretch gap-[2px]">
+              {BARS.map((w, i) => (
+                <span key={i} className="bg-[var(--ink)]" style={{ width: w }} />
+              ))}
+            </span>
+            <span className="eyebrow text-[10px] font-semibold">{t("tagline")}</span>
+          </span>
+        </div>
 
-          <nav className="hidden items-center gap-6 md:flex" aria-label="Primary">
-            <div
-              className="relative"
-              onMouseEnter={() => setOpen(true)}
-              onMouseLeave={() => setOpen(false)}
+        <nav aria-label={t("primary")} className="hidden items-center gap-7 lg:flex">
+          {SECTIONS.map((key) => (
+            <Link
+              key={key}
+              href={`/#${SECTION_IDS[key]}`}
+              className="relative text-[length:var(--text-sm)] font-medium hover:opacity-60"
             >
-              <button
-                ref={triggerRef}
-                type="button"
-                className="text-[length:var(--text-sm)] text-[var(--ink)]"
-                aria-expanded={open}
-                aria-controls={panelId}
-                onClick={() => setOpen((v) => !v)}
-                onFocus={() => setOpen(true)}
-              >
-                {t("services")}
-              </button>
-              {open && (
-                <div
-                  id={panelId}
-                  ref={panelRef}
-                  role="region"
-                  aria-label={t("services")}
-                  className="absolute left-1/2 top-full z-50 w-[min(90vw,56rem)] -translate-x-1/2 border border-[var(--rule-strong)] bg-[var(--surface)]"
+              {t(key)}
+              {key === "pricing" && (
+                <span
+                  aria-hidden="true"
+                  className="absolute -right-3.5 -top-1.5 grid h-4 w-4 place-items-center rounded-full bg-[var(--accent)] text-[9px] font-semibold text-white"
                 >
-                  <div className="grid grid-cols-3 gap-0">
-                    {categories.map((cat) => {
-                      const items = servicesForCategory(cat);
-                      return (
-                        <div
-                          key={cat.id}
-                          className="border-r border-[var(--rule)] p-4 last:border-r-0"
-                        >
-                          <Link
-                            href={`/services/${cat.slug[locale as "en" | "fr"]}`}
-                            className="heading-md mb-2 block text-[var(--ink)] no-underline"
-                          >
-                            {cat.title[locale as "en" | "fr"]}
-                          </Link>
-                          <ul className="space-y-2">
-                            {items.length === 0 ? (
-                              <li className="text-[length:var(--text-sm)] body-muted">
-                                —
-                              </li>
-                            ) : (
-                              items.map((item) => (
-                                <li key={item.id}>
-                                  <Link
-                                    href={`/services/${cat.slug[locale as "en" | "fr"]}/${item.slug}`}
-                                    className="text-[length:var(--text-sm)] text-[var(--ink)] no-underline hover:text-[var(--blue)]"
-                                  >
-                                    {item.title}
-                                  </Link>
-                                </li>
-                              ))
-                            )}
-                          </ul>
-                        </div>
-                      );
-                    })}
-                  </div>
-                  <div className="border-t border-[var(--rule)] px-4 py-3">
-                    <Link href="/services" className="text-[length:var(--text-sm)]">
-                      {t("services")} →
-                    </Link>
-                  </div>
-                </div>
+                  {PRICING_COUNT}
+                </span>
               )}
-            </div>
-            <Link href="/about" className="text-[length:var(--text-sm)] text-[var(--ink)] no-underline">
-              {t("about")}
             </Link>
-            <Link href="/ai-companies-montreal" className="text-[length:var(--text-sm)] text-[var(--ink)] no-underline">
-              {t("directory")}
-            </Link>
-            <Link href="/contact" className="text-[length:var(--text-sm)] text-[var(--ink)] no-underline">
-              {t("contact")}
-            </Link>
-            <LocaleSwitcher />
-            <a href={BOOKING_URL} className="btn-primary py-2" rel="noopener noreferrer">
-              {t("bookCall")}
-            </a>
-          </nav>
+          ))}
+        </nav>
 
+        <div className="flex items-center gap-4">
+          <LocaleSwitcher />
+          <Link
+            href="/#book"
+            className="hidden rounded-full bg-[var(--ink)] px-4 py-2 text-[length:var(--text-sm)] font-medium text-white hover:bg-[var(--accent)] sm:inline-flex"
+          >
+            {t("bookCall")}
+          </Link>
           <button
             type="button"
-            className="md:hidden text-[length:var(--text-sm)]"
+            className="flex h-10 w-10 flex-col items-center justify-center gap-[5px] lg:hidden"
             aria-expanded={mobileOpen}
+            aria-controls="mobile-nav"
+            aria-label={mobileOpen ? t("closeMenu") : t("openMenu")}
             onClick={() => setMobileOpen((v) => !v)}
           >
-            {mobileOpen ? t("closeMenu") : t("openMenu")}
+            <span
+              className={`h-[1.5px] w-6 bg-[var(--ink)] transition ${mobileOpen ? "translate-y-[3.25px] rotate-45" : ""}`}
+            />
+            <span
+              className={`h-[1.5px] w-6 bg-[var(--ink)] transition ${mobileOpen ? "-translate-y-[3.25px] -rotate-45" : ""}`}
+            />
           </button>
         </div>
       </div>
 
       {mobileOpen && (
-        <div className="border-t border-[var(--rule)] bg-[var(--surface)] md:hidden">
-          <div className="site-grid py-4">
-            <button
-              type="button"
-              className="flex w-full items-center justify-between py-3 text-left text-[length:var(--text-sm)]"
-              aria-expanded={mobileServicesOpen}
-              onClick={() => setMobileServicesOpen((v) => !v)}
+        <nav id="mobile-nav" aria-label={t("primary")} className="border-t border-[var(--rule)] lg:hidden">
+          <div className="site-grid flex flex-col py-4">
+            {SECTIONS.map((key) => (
+              <Link
+                key={key}
+                href={`/#${SECTION_IDS[key]}`}
+                className="py-3 text-2xl font-semibold tracking-[-0.04em]"
+                onClick={() => setMobileOpen(false)}
+              >
+                {t(key)}
+              </Link>
+            ))}
+            <Link
+              href="/#book"
+              className="mt-4 inline-flex justify-center rounded-full bg-[var(--ink)] px-4 py-3 text-[length:var(--text-sm)] font-medium text-white"
+              onClick={() => setMobileOpen(false)}
             >
-              {t("services")}
-              <span aria-hidden="true">{mobileServicesOpen ? "−" : "+"}</span>
-            </button>
-            {mobileServicesOpen && (
-              <div className="pb-4">
-                {categories.map((cat) => {
-                  const items = servicesForCategory(cat);
-                  return (
-                    <div key={cat.id} className="mb-4 border-t border-[var(--rule)] pt-3">
-                      <Link
-                        href={`/services/${cat.slug[locale as "en" | "fr"]}`}
-                        className="font-medium text-[var(--ink)] no-underline"
-                      >
-                        {cat.title[locale as "en" | "fr"]}
-                      </Link>
-                      <ul className="mt-2 space-y-2 pl-3">
-                        {items.map((item) => (
-                          <li key={item.id}>
-                            <Link
-                              href={`/services/${cat.slug[locale as "en" | "fr"]}/${item.slug}`}
-                              className="text-[length:var(--text-sm)] text-[var(--ink-muted)] no-underline"
-                            >
-                              {item.title}
-                            </Link>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  );
-                })}
-              </div>
-            )}
-            <Link href="/about" className="block py-3 text-[length:var(--text-sm)] text-[var(--ink)] no-underline">
-              {t("about")}
-            </Link>
-            <Link href="/ai-companies-montreal" className="block py-3 text-[length:var(--text-sm)] text-[var(--ink)] no-underline">
-              {t("directory")}
-            </Link>
-            <Link href="/contact" className="block py-3 text-[length:var(--text-sm)] text-[var(--ink)] no-underline">
-              {t("contact")}
-            </Link>
-            <div className="py-3">
-              <LocaleSwitcher />
-            </div>
-            <a href={BOOKING_URL} className="btn-primary mt-2 inline-flex" rel="noopener noreferrer">
               {t("bookCall")}
-            </a>
+            </Link>
           </div>
-        </div>
+        </nav>
       )}
     </header>
   );
 }
 
 function LocaleSwitcher() {
+  const t = useTranslations("nav");
   const locale = useLocale();
   const pathname = usePathname();
   const other = locale === "en" ? "fr" : "en";
@@ -266,8 +136,9 @@ function LocaleSwitcher() {
     <Link
       href={pathname || "/"}
       locale={other}
-      className="text-[length:var(--text-sm)] text-[var(--ink-muted)] no-underline uppercase"
       hrefLang={other}
+      aria-label={t("language")}
+      className="eyebrow rounded-full border border-[var(--rule)] px-2.5 py-1 hover:border-[var(--ink)]"
     >
       {other}
     </Link>

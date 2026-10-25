@@ -1,12 +1,12 @@
 # Taku-Media
 
-Next.js (App Router) site for Taku-Media, an AI consulting practice in Montreal.
+Next.js (App Router) one-page site for Taku-Media: senior engineering pods, prototype production hardening, and iOS/Android app sprints.
 
 ## Stack
 
 - Next.js + TypeScript + Tailwind CSS
 - `next-intl` (`/en`, `/fr`)
-- MDX services in `content/services/{locale}`
+- Hero video loop and section imagery generated with Higgsfield (`public/media/`)
 - Deploy target: Vercel
 
 ## Develop
@@ -18,19 +18,16 @@ npm run dev
 
 Open [http://localhost:3000](http://localhost:3000). Locale middleware redirects `/` from `Accept-Language`.
 
-Dev-only control: **Toggle grid** (bottom right) shows or hides column hairlines.
-
 ## Content
 
-- Service pages: `content/services/en/*.mdx` and `content/services/fr/*.mdx`
-- Set `published: true` only when copy is unique and substantive
-- Company directory: `content/companies.json`
-- UI strings: `messages/en.json`, `messages/fr.json`
+- All page copy (EN/FR): `messages/en.json` and `messages/fr.json` under `home`
+- Page layout: `src/app/[locale]/page.tsx`
+- Prices for structured data: `TIER_META` in `src/app/[locale]/page.tsx` (keep in sync with the copy)
 - Booking URL: `src/lib/constants.ts` → `BOOKING_URL`
+- Media: `public/media/` (hero prism frame and loop, work/process photos, CTA background)
+- Design tokens (colours, radii, type scale): `src/app/globals.css`
 
-## Docs
-
-- [Local SEO checklist](docs/local-seo-checklist.md) (off-site work)
+Old pages (`/about`, `/contact`, `/services/*`, `/ai-companies-montreal`) permanently redirect to the home page (see `next.config.ts`).
 
 ## Note on Bill 96
 

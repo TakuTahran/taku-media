@@ -1,77 +1,269 @@
 {
-  "about": {
-    "body": "Nous nous concentrons sur des systèmes que le personnel utilisera vraiment: automatisations entre applications déjà payées, assistants support et vente avec règles de transfert claires, et rapports qui répondent aux questions d'affaires en langage simple.",
-    "cta": "Réserver un appel",
-    "intro": "Taku-Media est une pratique de conseil en IA basée à Montréal. Nous aidons les opérateurs à intégrer des outils d'IA dans des flux réels.",
-    "title": "À propos de Taku-Media"
-  },
-  "common": {
-    "learnMore": "En savoir plus",
-    "loading": "Chargement",
-    "viewAll": "Tout voir"
-  },
-  "contact": {
-    "bookingLabel": "Réserver un appel",
-    "emailLabel": "Courriel",
-    "embedNote": "Vous préférez un calendrier? Utilisez le planificateur ci-dessous.",
-    "intro": "Réservez un appel ou écrivez-nous. Nous répondons pendant les heures ouvrables, heure de l'Est.",
-    "title": "Contact"
-  },
-  "directory": {
-    "empty": "Aucune entreprise listée pour le moment.",
-    "featuredLabel": "Propriétaire du site",
-    "intro": "Un répertoire de travail des firmes liées à l'IA à Montréal. Les entrées sont fournies par les opérateurs de ce site. Taku-Media apparaît en premier parce que nous maintenons la liste, indiqué comme propriétaire du site.",
-    "placeholderLabel": "Exemple",
-    "title": "Consultants et entreprises d'IA à Montréal"
-  },
   "footer": {
-    "company": "Entreprise",
-    "connect": "Coordonnées",
-    "napTodo": "Adresse et téléphone à confirmer.",
-    "rights": "Tous droits réservés.",
-    "services": "Services",
-    "tagline": "Mise en œuvre et intégration de l'IA pour les entreprises montréalaises."
+    "rights": "Code, propriété intellectuelle et designs appartiennent à 100 % au client."
   },
   "home": {
-    "brand": "Taku-Media",
-    "cta": "Réserver un appel",
-    "headline": "De l'IA adaptée à la façon dont votre entreprise fonctionne déjà.",
-    "sectionAreas": "02 Domaines",
-    "sectionAreasTitle": "Où nous passons notre temps.",
-    "sectionCta": "03 Prochaine étape",
-    "sectionCtaBody": "Un court appel suffit pour voir si nous pouvons aider. Apportez le flux qui fait perdre le plus de temps.",
-    "sectionCtaTitle": "Dites-nous ce qui coince.",
-    "sectionPractice": "01 Pratique",
-    "sectionPracticeBody": "La plupart des projets d'IA bloquent sur l'intégration: outils déconnectés, propriété floue, flux auxquels personne ne fait confiance. Nous branchons les outils que vous utilisez déjà, ou en recommandons d'autres, puis vous laissons capables de les faire tourner.",
-    "sectionPracticeTitle": "Mise en œuvre, pas de promesse vague.",
-    "supporting": "Nous intégrons des outils d'IA tiers pour les opérateurs à Montréal. Stratégie, branchement, formation. Pas une autre plateforme à acheter."
-  },
-  "meta": {
-    "siteName": "Taku-Media",
-    "tagline": "Conseil en IA pour les entreprises de Montréal"
+    "book": {
+      "badge": "Prochaines places de sprint dans 48 heures",
+      "body": "Choisissez une plage de 15 minutes ci-dessous pour revoir votre architecture, cerner les goulots d’étranglement et fixer la date de départ de votre escouade.",
+      "cta": "Réserver un appel",
+      "display": "Lancez votre sprint avec Taku-Media®",
+      "prep": "Ayez sous la main : vos technologies principales, votre date de lancement visée et un lien vers le prototype ou l’accès au dépôt.",
+      "title": "Ne laissez plus les postes vacants freiner votre produit."
+    },
+    "faq": {
+      "display": "Vos questions, nos réponses.",
+      "items": [
+        {
+          "answer": "Nous auditons et refactorisons méthodiquement le code généré par des outils comme Cursor, v0, Bolt ou Lovable. Nous déplaçons les clés sensibles vers un gestionnaire de secrets, établissons des modèles TypeScript stricts, créons un routage backend modulaire, indexons la base de données et bâtissons des pipelines CI/CD automatisés pour que l’application résiste au vrai trafic.",
+          "question": "Que comprend une refonte de projet codé à l’IA?"
+        },
+        {
+          "answer": "Nos escouades sont déployées dans les 48 heures suivant l’appel de cadrage technique initial. Nous nous branchons directement sur votre organisation GitHub, vos tableaux Linear ou Jira et votre espace Slack, sans longue période d’intégration.",
+          "question": "En combien de temps votre escouade peut-elle commencer sur notre code?"
+        },
+        {
+          "answer": "Les deux. Nous développons des applications iOS natives en Swift / SwiftUI et des applications Android natives en Kotlin / Jetpack Compose lorsque les besoins matériels l’exigent. Pour les fondateurs qui visent les deux plateformes avec une logique partagée, nous déployons des architectures React Native.",
+          "question": "Développez-vous des applications mobiles natives ou multiplateformes?"
+        },
+        {
+          "answer": "Oui. Nos ingénieurs seniors respectent vos conventions de branches, soumettent des pull requests standard et participent aux revues de code avec votre équipe interne.",
+          "question": "Nos développeurs internes peuvent-ils travailler avec votre escouade?"
+        },
+        {
+          "answer": "Vous conservez 100 % de la propriété du code source, de la documentation, des pipelines CI/CD et des configurations d’infrastructure dès le premier jour. Tout le code est versé directement dans vos dépôts privés.",
+          "question": "À qui appartiennent la propriété intellectuelle et le code écrits pendant le sprint?"
+        },
+        {
+          "answer": "Les sprints de deux semaines sont facturés à 100 % d’avance pour réserver le calendrier de l’équipe. Les nouveaux MVP et les refontes de code IA fonctionnent avec un dépôt de 50 % et le solde à la livraison.",
+          "question": "Quel engagement initial faut-il pour démarrer un sprint?"
+        }
+      ],
+      "label": "Réponses directes",
+      "title": "Questions fréquentes"
+    },
+    "hero": {
+      "badge": "Déploiement de l’escouade : < 48 heures",
+      "body": "Ajoutez de la capacité d’ingénierie senior sur demande. Nous transformons vos prototypes fragiles codés à l’IA en architectures éprouvées, livrons des applications iOS et Android natives prêtes pour la production et vidons vos carnets de sprint critiques pendant que votre équipe recrute.",
+      "chipBody": "Cadrage avec un ingénieur senior",
+      "chipTitle": "Appel de 15 min",
+      "ctaPrimary": "Réserver une revue d’architecture de 15 min",
+      "ctaSecondary": "Voir les sprints à prix fixe →",
+      "eyebrow": "Nous sommes Taku-Media®",
+      "marquee": "Défilez pour explorer —",
+      "stackLabel": "Technologies de production de niveau entreprise",
+      "tags": [
+        "Durcissement de prototypes",
+        "iOS et Android",
+        "Sprints de carnet",
+        "Escouades seniors"
+      ],
+      "titleAccent": "pas en quelques mois.",
+      "titleLead": "Des ingénieurs seniors à l’œuvre en quelques jours,"
+    },
+    "meta": {
+      "description": "Déployez des ingénieurs seniors en 48 heures. Nous rendons vos prototypes codés à l’IA prêts pour la production, livrons des applications iOS et Android natives et vidons vos carnets de sprint, sans engagement à long terme.",
+      "keywords": "refonte de prototype codé à l’IA, refactorisation de prototype, développement d’applications mobiles, iOS Swift, Android Kotlin, sprints React, équipe de développement externe",
+      "ogDescription": "Transformez vos applications générées par l’IA en plateformes prêtes pour l’entreprise. Sprints d’ingénierie à portée fixe de 2 à 4 semaines.",
+      "ogTitle": "Escouades d’ingénieurs seniors | Du prototype à la production en quelques jours",
+      "orgDescription": "Ingénierie logicielle senior en formule clé en main : sprints de développement à prix fixe, refontes de prototypes pour la production et applications mobiles multiplateformes.",
+      "title": "Escouades d’ingénieurs seniors et mise en production"
+    },
+    "mobile": {
+      "body": "De la puissance native de Swift et Kotlin aux architectures React Native qui livrent sur les deux plateformes en un seul cycle de publication.",
+      "cards": [
+        {
+          "badge": "Plateforme iOS",
+          "body": "Conçues selon les directives iOS, avec accélération matérielle et performances CoreData/Metal fluides. Idéal pour les applications grand public, le rendu visuel à haute fréquence d’images et les flux hors ligne.",
+          "delivery": "Livraison type : 3 à 4 semaines",
+          "points": [
+            "Authentification biométrique (Face ID/Touch ID)",
+            "Prise en charge de WidgetKit et des Activités en direct",
+            "Achats intégrés Apple et intégration de StoreKit 2",
+            "Préproduction TestFlight et soumission à l’App Store complètes"
+          ],
+          "stack": "SwiftUI / Swift Concurrency",
+          "title": "L’excellence native de l’écosystème Apple"
+        },
+        {
+          "badge": "Multiplateforme / Android",
+          "body": "Développez une fois, publiez sur les deux plateformes sans sacrifier la fluidité à 60 i/s ni les conventions natives de chaque système. Construit avec TypeScript moderne et des ponts natifs.",
+          "delivery": "Livraison type : 2 à 4 semaines",
+          "points": [
+            "Base de code partagée entre iOS et Android (plus de 90 % de réutilisation)",
+            "Récupération en arrière-plan et notifications push localisées",
+            "Signature et déploiement automatisés sur Google Play",
+            "Mises à jour à distance (OTA) avec Expo EAS"
+          ],
+          "stack": "Jetpack Compose / React Native",
+          "title": "Distribution rapide sur plusieurs systèmes"
+        }
+      ],
+      "display": "Mobile.",
+      "label": "Capacités mobiles",
+      "title": "Des applications mobiles natives et multiplateformes conçues pour l’App Store."
+    },
+    "overhaul": {
+      "afterLabel": "// Couche de service durcie pour la production",
+      "afterResult": "// Résultat : frontière de types stricte, réponse sous 15 ms, données chiffrées",
+      "badge": "Moteur de mise en production",
+      "beforeLabel": "// Modèle vulnérable généré par l’IA",
+      "beforeResult": "// Résultat : requête illimitée, aucune validation d’accès, faille de sécurité",
+      "body": "Vous avez bâti un prototype fonctionnel avec Cursor, Lovable, Bolt ou v0? Votre preuve de concept est faite. Il vous faut maintenant une architecture qui tient le coup le jour du lancement. Nous reprenons les bases de code générées par l’IA et réécrivons leur infrastructure pour l’échelle, la conformité et la stabilité d’une entreprise.",
+      "codeLabel": "Avant et après la refactorisation",
+      "cta": "Faire auditer mon application",
+      "display": "Refonte.",
+      "points": [
+        "Retirer les clés d’API exposées côté client et appliquer une sécurité au niveau des lignes (RLS) stricte",
+        "Refactoriser le code spaghetti en services modulaires, propres et typés",
+        "Mettre en place le typage de bout en bout, des règles de linting et des pipelines CI/CD automatisés",
+        "Optimiser les requêtes, indexer le schéma et mutualiser les connexions à la base de données"
+      ],
+      "title": "Transformez votre prototype codé à l’IA en plateforme de production solide."
+    },
+    "pricing": {
+      "display": "Tarifs",
+      "featured": "Le plus demandé",
+      "label": "Tarifs transparents",
+      "tiers": [
+        {
+          "body": "Deux ingénieurs seniors intègrent votre dépôt pour éliminer la dette technique, construire les intégrations tierces manquantes et terminer les fonctionnalités en retard.",
+          "cta": "Réserver une date de sprint",
+          "label": "Carnet de tâches",
+          "name": "Sprint de deux semaines",
+          "points": [
+            "2 ingénieurs full-stack seniors dédiés",
+            "Intégration terminée en moins de 48 heures",
+            "Accès direct à Slack, GitHub et Linear",
+            "Points quotidiens asynchrones et revues de PR"
+          ],
+          "price": "12 500 $ US",
+          "terms": "Forfait payable d’avance"
+        },
+        {
+          "body": "Transformez des applications fragiles générées par l’IA (Cursor/v0/Bolt/Lovable) en plateformes infonuagiques sécurisées, prêtes pour des clients d’entreprise payants.",
+          "cta": "Réserver une refonte",
+          "label": "Refactorisation de prototype",
+          "name": "Refonte de code IA",
+          "points": [
+            "Audit complet de sécurité et des vulnérabilités",
+            "Refactorisation complète de l’architecture et du schéma",
+            "Frontières de types, gestion des erreurs et journalisation",
+            "Infrastructure de production AWS/Supabase",
+            "Suite de tests automatisés et flux de PR"
+          ],
+          "price": "14 500 $ US",
+          "terms": "50 % d’avance, 50 % au déploiement"
+        },
+        {
+          "body": "Des spécifications de conception à la mise en production en 30 jours. Une plateforme Web complète ou une application iOS/Android native prête pour le marché.",
+          "cta": "Lancer un nouveau MVP",
+          "label": "Développement complet",
+          "name": "Sprint MVP mobile ou Web",
+          "points": [
+            "3 ingénieurs full-stack ou mobiles seniors + un architecte principal",
+            "Backend complet, orchestration d’API et couche de données",
+            "Déploiement sur l’App Store, Google Play ou le Web",
+            "14 jours de stabilisation après le lancement"
+          ],
+          "price": "25 000 $ US",
+          "terms": "Livraison en quatre semaines"
+        }
+      ],
+      "title": "Portée fixe. Dates de livraison garanties. Aucune surprise."
+    },
+    "problem": {
+      "cards": [
+        {
+          "body": "Recruter un ingénieur full-stack senior à l’interne exige des entrevues techniques à n’en plus finir, des négociations salariales et des préavis, pendant que votre feuille de route stagne.",
+          "stat": "68 jours",
+          "title": "Délai moyen d’embauche"
+        },
+        {
+          "body": "Les outils d’échafaudage IA (Cursor, v0, Bolt) vous font passer de 0 à 1 rapidement, mais s’effondrent avec des secrets codés en dur, des appels d’API fragiles, des fuites d’état et aucune frontière de sécurité.",
+          "stat": "Le mur du code IA",
+          "title": "Les prototypes cèdent sous le trafic"
+        },
+        {
+          "body": "Les firmes de conseil traditionnelles facturent 40 000 $ pour cadrer un projet avant d’écrire une seule ligne de code. Nous travaillons directement dans votre dépôt, avec des PR fonctionnelles en moins de 48 heures.",
+          "stat": "Zéro lourdeur d’agence",
+          "title": "Pas d’audit de découverte de 6 semaines"
+        }
+      ],
+      "display": "L’écart.",
+      "label": "L’écart de vélocité",
+      "title": "Pourquoi le recrutement traditionnel et les agences freinent les jeunes entreprises."
+    },
+    "process": {
+      "display": "Processus",
+      "label": "Protocole de livraison",
+      "steps": [
+        {
+          "body": "Nous examinons votre dépôt, votre documentation d’API ou vos fichiers Figma, puis transformons les tâches et les priorités de sécurité en plan de sprint structuré.",
+          "label": "01 // Jour 1",
+          "title": "Cadrage et audit du dépôt"
+        },
+        {
+          "body": "Notre équipe se branche directement sur vos canaux Slack privés, votre organisation GitHub et vos outils de suivi. Nous configurons l’environnement local et lançons les suites de tests.",
+          "label": "02 // Jour 2",
+          "title": "Intégration sans friction"
+        },
+        {
+          "body": "Des PR livrées chaque jour avec des tests automatisés complets. Des démos Loom asynchrones quotidiennes gardent toutes les parties prenantes alignées.",
+          "label": "03 // Jours 3 à 13",
+          "title": "Exécution à haute vélocité"
+        },
+        {
+          "body": "Transfert complet du code. Vous possédez 100 % du dépôt, de la documentation des environnements et des pipelines de déploiement, sans dépendance envers un fournisseur.",
+          "label": "04 // Jour 14 et +",
+          "title": "Déploiement et transfert"
+        }
+      ],
+      "tags": [
+        [
+          "Audit du dépôt",
+          "Revue Figma",
+          "Carte de sécurité",
+          "Plan de sprint"
+        ],
+        [
+          "Slack",
+          "GitHub",
+          "Linear / Jira",
+          "Env. local"
+        ],
+        [
+          "PR quotidiennes",
+          "Tests automatisés",
+          "Démos Loom"
+        ],
+        [
+          "Passation complète",
+          "Documentation",
+          "CI/CD",
+          "Aucune dépendance"
+        ]
+      ],
+      "title": "Comment nous démarrons en 48 heures"
+    }
   },
   "nav": {
-    "about": "À propos",
     "bookCall": "Réserver un appel",
-    "closeMenu": "Fermer le menu",
-    "contact": "Contact",
-    "directory": "IA à Montréal",
-    "language": "Langue",
-    "openMenu": "Ouvrir le menu",
-    "services": "Services",
-    "skipToContent": "Aller au contenu"
+    "closeMenu": "Fermer",
+    "faq": "FAQ",
+    "language": "English",
+    "mobile": "Mobile",
+    "openMenu": "Menu",
+    "overhaul": "Refonte",
+    "pricing": "Tarifs",
+    "primary": "Navigation principale",
+    "process": "Processus",
+    "skipToContent": "Aller au contenu",
+    "tagline": "Studio d’ingénierie"
   },
-  "services": {
-    "allCategories": "Toutes les catégories",
-    "backToHub": "Tous les services",
-    "bookCta": "Réserver un appel",
-    "categoryEmpty": "Aucun service publié dans cette catégorie pour le moment.",
-    "foundation": "Fondations",
-    "hubIntro": "Mise en œuvre et intégration autour d'outils d'IA tiers. Nous ne construisons pas les plateformes sous-jacentes.",
-    "hubTitle": "Services",
-    "priceFrom": "À partir de",
-    "related": "Services liés",
-    "tools": "Outils",
-    "unpublished": "Cette page n'est pas encore publiée."
+  "notFound": {
+    "body": "Cette page n’existe plus. Tout se trouve maintenant sur la page d’accueil.",
+    "home": "Retour à l’accueil",
+    "title": "Page introuvable"
   }
 }
