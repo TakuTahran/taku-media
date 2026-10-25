@@ -20,11 +20,9 @@ type MobileCard = {
 type Tier = {
   label: string;
   name: string;
-  price: string;
-  terms: string;
+  timeline: string;
   body: string;
   points: string[];
-  cta: string;
 };
 type Step = { label: string; title: string; body: string };
 type Faq = { question: string; answer: string };
@@ -39,11 +37,11 @@ const STACK = [
   "AWS / Docker",
 ];
 
-// Order matches home.pricing.tiers in messages/*.json.
+// Order matches home.engagements.tiers in messages/*.json.
 const TIER_META = [
-  { id: "backlog-sprint", price: 12500, serviceType: "Software Development Sprint" },
-  { id: "vibe-hardening", price: 14500, serviceType: "Software Refactoring & Architecture" },
-  { id: "mvp-sprint", price: 25000, serviceType: "Mobile App Development" },
+  { id: "backlog-sprint", serviceType: "Software Development Sprint" },
+  { id: "vibe-hardening", serviceType: "Software Refactoring & Architecture" },
+  { id: "mvp-sprint", serviceType: "Mobile App Development" },
 ];
 const FEATURED_TIER = 1;
 
@@ -148,7 +146,7 @@ export default async function HomePage({ params }: Props) {
   const problemCards = t.raw("problem.cards") as Card[];
   const overhaulPoints = t.raw("overhaul.points") as string[];
   const mobileCards = t.raw("mobile.cards") as MobileCard[];
-  const tiers = t.raw("pricing.tiers") as Tier[];
+  const tiers = t.raw("engagements.tiers") as Tier[];
   const steps = t.raw("process.steps") as Step[];
   const stepTags = t.raw("process.tags") as string[][];
   const faqs = t.raw("faq.items") as Faq[];
@@ -166,7 +164,6 @@ export default async function HomePage({ params }: Props) {
               name: tier.name,
               serviceType: TIER_META[i].serviceType,
               description: tier.body,
-              price: TIER_META[i].price,
             })),
             faqs,
           }),
@@ -229,7 +226,7 @@ export default async function HomePage({ params }: Props) {
                     {t("hero.ctaPrimary")}
                   </a>
                   <a
-                    href="#pricing"
+                    href="#engagements"
                     className="glass inline-flex items-center justify-center rounded-full px-6 py-3.5 text-[length:var(--text-sm)] font-medium hover:bg-white/25"
                   >
                     {t("hero.ctaSecondary")}
@@ -448,10 +445,14 @@ export default async function HomePage({ params }: Props) {
         </div>
       </section>
 
-      {/* PRICING */}
-      <section id="pricing" className="scroll-mt-16 py-24 md:py-32">
+      {/* ENGAGEMENTS */}
+      <section id="engagements" className="scroll-mt-16 py-24 md:py-32">
         <div className="site-grid">
-          <SectionHead eyebrow={t("pricing.label")} display={t("pricing.display")} title={t("pricing.title")} />
+          <SectionHead
+            eyebrow={t("engagements.label")}
+            display={t("engagements.display")}
+            title={t("engagements.title")}
+          />
           <div className="grid grid-cols-1 gap-4 lg:grid-cols-3">
             {tiers.map((tier, i) => {
               const featured = i === FEATURED_TIER;
@@ -472,16 +473,13 @@ export default async function HomePage({ params }: Props) {
                     </span>
                     {featured && (
                       <span className="eyebrow rounded-full bg-[var(--accent)] px-3 py-1 text-white">
-                        {t("pricing.featured")}
+                        {t("engagements.featured")}
                       </span>
                     )}
                   </div>
                   <h3 className="text-[length:var(--text-md)] font-semibold tracking-[-0.03em]">{tier.name}</h3>
                   <p className="mt-3 text-[clamp(2.5rem,4vw,3.5rem)] font-semibold leading-none tracking-[-0.05em]">
-                    {tier.price}
-                  </p>
-                  <p className={`mt-2 text-[length:var(--text-sm)] ${featured ? "text-white/60" : "text-[var(--ink-muted)]"}`}>
-                    {tier.terms}
+                    {tier.timeline}
                   </p>
                   <p
                     className={`mt-6 text-[length:var(--text-sm)] leading-relaxed ${
@@ -505,7 +503,7 @@ export default async function HomePage({ params }: Props) {
                     ))}
                   </ul>
                   <a href="#book" className={`${featured ? lightBtn : darkBtn} mt-auto w-full`}>
-                    {tier.cta}
+                    {t("engagements.cta")}
                   </a>
                 </div>
               );

@@ -4,16 +4,16 @@ import { useEffect, useState } from "react";
 import { useLocale, useTranslations } from "next-intl";
 import { Link, usePathname } from "@/i18n/navigation";
 
-const SECTIONS = ["overhaul", "mobile", "process", "pricing", "faq"] as const;
+const SECTIONS = ["overhaul", "mobile", "process", "engagements", "faq"] as const;
 const SECTION_IDS: Record<(typeof SECTIONS)[number], string> = {
   overhaul: "vibe-hardening",
   mobile: "mobile",
   process: "process",
-  pricing: "pricing",
+  engagements: "engagements",
   faq: "faq",
 };
-// Count bubble on the pricing link, matching the three sprint tiers.
-const PRICING_COUNT = 3;
+// Count bubble on the engagements link, matching the three packages.
+const ENGAGEMENT_COUNT = 3;
 
 // Decorative barcode mark next to the logo; bar widths in px.
 const BARS = [2, 1, 3, 1, 1, 2, 3, 1, 2, 1, 1, 3, 2, 1];
@@ -61,12 +61,12 @@ export function SiteHeader() {
               className="relative text-[length:var(--text-sm)] font-medium hover:opacity-60"
             >
               {t(key)}
-              {key === "pricing" && (
+              {key === "engagements" && (
                 <span
                   aria-hidden="true"
                   className="absolute -right-3.5 -top-1.5 grid h-4 w-4 place-items-center rounded-full bg-[var(--accent)] text-[9px] font-semibold text-white"
                 >
-                  {PRICING_COUNT}
+                  {ENGAGEMENT_COUNT}
                 </span>
               )}
             </Link>

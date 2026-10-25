@@ -1,5 +1,9 @@
-# Git-triggered builds have no command in the Netlify UI, so set it here;
-# Netlify's Next.js runtime is applied automatically for this framework.
+# Git-triggered builds have no command in the Netlify UI, and the project
+# doesn't add the Next.js runtime on its own, so both are set here. Without
+# the plugin, .next was deployed as static files and every page 404'd.
 [build]
   command = "npm run build"
   publish = ".next"
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"

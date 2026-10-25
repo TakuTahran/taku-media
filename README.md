@@ -22,7 +22,7 @@ Open [http://localhost:3000](http://localhost:3000). Locale middleware redirects
 
 - All page copy (EN/FR): `messages/en.json` and `messages/fr.json` under `home`
 - Page layout: `src/app/[locale]/page.tsx`
-- Prices for structured data: `TIER_META` in `src/app/[locale]/page.tsx` (keep in sync with the copy)
+- Service IDs for structured data: `TIER_META` in `src/app/[locale]/page.tsx` (same order as `home.engagements.tiers`)
 - Booking URL: `src/lib/constants.ts` → `BOOKING_URL`
 - Media: `public/media/` (hero prism frame and loop, work/process photos, CTA background)
 - Design tokens (colours, radii, type scale): `src/app/globals.css`

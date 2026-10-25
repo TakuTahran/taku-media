@@ -16,7 +16,6 @@ export function homeGraphLd(opts: {
     name: string;
     serviceType: string;
     description: string;
-    price: number;
   }[];
   faqs: { question: string; answer: string }[];
 }): JsonLd {
@@ -41,12 +40,6 @@ export function homeGraphLd(opts: {
         serviceType: s.serviceType,
         description: s.description,
         provider: { "@id": orgId },
-        offers: {
-          "@type": "Offer",
-          price: String(s.price),
-          priceCurrency: "USD",
-          availability: "https://schema.org/InStock",
-        },
       })),
       {
         "@type": "FAQPage",

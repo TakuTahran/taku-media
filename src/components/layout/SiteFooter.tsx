@@ -25,8 +25,8 @@ export async function SiteFooter() {
               </Link>
             </li>
             <li>
-              <Link href="/#pricing" className={linkClass}>
-                {tNav("pricing")}
+              <Link href="/#engagements" className={linkClass}>
+                {tNav("engagements")}
               </Link>
             </li>
             <li>

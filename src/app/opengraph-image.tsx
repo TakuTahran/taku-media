@@ -50,7 +50,7 @@ export default function OpenGraphImage() {
             <span style={{ color: "#8A8883" }}>not months.</span>
           </div>
           <div style={{ display: "flex", fontSize: 28, color: "#5C5C5C" }}>
-            Prototype hardening · iOS & Android · Fixed-price sprints
+            Prototype hardening · iOS & Android · Fixed-scope sprints
           </div>
         </div>
       </div>

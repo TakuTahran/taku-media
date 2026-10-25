@@ -11,6 +11,52 @@
       "prep": "Have these ready: your primary stack, target launch date, and a prototype link or repo access.",
       "title": "Stop letting open roles stall your product."
     },
+    "engagements": {
+      "cta": "Get a quote",
+      "display": "Engagements",
+      "featured": "Most Requested",
+      "label": "Ways to work with us",
+      "tiers": [
+        {
+          "body": "Deploy two senior engineers into your existing repo to wipe out technical debt, build missing third-party integrations, and push delayed features over the finish line.",
+          "label": "Backlog Clearing",
+          "name": "Two-Week Sprint",
+          "points": [
+            "2 Dedicated Senior Full-Stack Engineers",
+            "Onboarding completed in < 48 hours",
+            "Direct Slack, GitHub & Linear integration",
+            "Daily async standups & PR reviews"
+          ],
+          "timeline": "2 weeks"
+        },
+        {
+          "body": "Transform brittle AI-generated apps (Cursor/v0/Bolt/Lovable) into secure, production-grade cloud platforms ready for paying enterprise customers.",
+          "label": "Prototype Refactoring",
+          "name": "Vibe-Code Overhaul",
+          "points": [
+            "Full codebase security & vulnerability audit",
+            "Complete architectural & schema refactoring",
+            "Type boundaries, error boundaries & logging",
+            "Production AWS/Supabase infrastructure setup",
+            "Automated testing suite & PR workflows"
+          ],
+          "timeline": "2 to 4 weeks"
+        },
+        {
+          "body": "From design specifications to production release in 30 days. Complete web platform or native iOS/Android mobile application ready for market release.",
+          "label": "Full Buildout",
+          "name": "Mobile / Web MVP Sprint",
+          "points": [
+            "3 Senior Full-Stack / Mobile Engineers + Lead Architect",
+            "Full backend, API orchestration & database layer",
+            "App Store / Google Play / Web deployment",
+            "14 days of post-launch stabilization support"
+          ],
+          "timeline": "4 weeks"
+        }
+      ],
+      "title": "Fixed Scopes. Guaranteed Delivery Dates. No Surprises."
+    },
     "faq": {
       "display": "Answered questions.",
       "items": [
@@ -48,7 +94,7 @@
       "chipBody": "Scoping with a senior engineer",
       "chipTitle": "Book a 15-min call",
       "ctaPrimary": "Book 15-Min Architecture Review",
-      "ctaSecondary": "Explore Fixed-Price Sprints →",
+      "ctaSecondary": "Explore engagements →",
       "eyebrow": "We are Taku-Media®",
       "marquee": "Scroll to explore —",
       "stackLabel": "Enterprise-Grade Production Stack",
@@ -66,7 +112,7 @@
       "keywords": "vibe coding production overhaul, prototype refactoring, mobile app development, iOS Swift, Android Kotlin, react engineering sprints, outsourced dev pods",
       "ogDescription": "Turn AI-generated, vibe-coded apps into enterprise-ready platforms. Fixed-scope 2 to 4 week engineering sprints.",
       "ogTitle": "Senior Engineering Pods | From Prototype to Production in Days",
-      "orgDescription": "Productized senior software engineering delivering fixed-price development sprints, prototype production overhauls, and cross-platform mobile apps.",
+      "orgDescription": "Productized senior software engineering delivering fixed-scope development sprints, prototype production overhauls, and cross-platform mobile apps.",
       "title": "Senior Engineering Pods & Production Hardening"
     },
     "mobile": {
@@ -120,57 +166,6 @@
         "Database query optimization, schema indexing, and connection pooling"
       ],
       "title": "Turn Your Vibe-Coded Prototype Into a Rock-Solid Production Platform."
-    },
-    "pricing": {
-      "display": "Pricing",
-      "featured": "Most Requested",
-      "label": "Transparent Sprint Pricing",
-      "tiers": [
-        {
-          "body": "Deploy two senior engineers into your existing repo to wipe out technical debt, build missing third-party integrations, and push delayed features over the finish line.",
-          "cta": "Reserve Sprint Date",
-          "label": "Backlog Clearing",
-          "name": "Two-Week Sprint",
-          "points": [
-            "2 Dedicated Senior Full-Stack Engineers",
-            "Onboarding completed in < 48 hours",
-            "Direct Slack, GitHub & Linear integration",
-            "Daily async standups & PR reviews"
-          ],
-          "price": "$12,500 USD",
-          "terms": "Upfront flat fee"
-        },
-        {
-          "body": "Transform brittle AI-generated apps (Cursor/v0/Bolt/Lovable) into secure, production-grade cloud platforms ready for paying enterprise customers.",
-          "cta": "Book Production Overhaul",
-          "label": "Prototype Refactoring",
-          "name": "Vibe-Code Overhaul",
-          "points": [
-            "Full codebase security & vulnerability audit",
-            "Complete architectural & schema refactoring",
-            "Type boundaries, error boundaries & logging",
-            "Production AWS/Supabase infrastructure setup",
-            "Automated testing suite & PR workflows"
-          ],
-          "price": "$14,500 USD",
-          "terms": "50% upfront, 50% upon deployment"
-        },
-        {
-          "body": "From design specifications to production release in 30 days. Complete web platform or native iOS/Android mobile application ready for market release.",
-          "cta": "Launch Greenfield MVP",
-          "label": "Full Buildout",
-          "name": "Mobile / Web MVP Sprint",
-          "points": [
-            "3 Senior Full-Stack / Mobile Engineers + Lead Architect",
-            "Full backend, API orchestration & database layer",
-            "App Store / Google Play / Web deployment",
-            "14 days of post-launch stabilization support"
-          ],
-          "price": "$25,000 USD",
-          "terms": "Four-week delivery milestone"
-        }
-      ],
-      "title": "Fixed Scopes. Guaranteed Delivery Dates. No Surprises."
     },
     "problem": {
       "cards": [
@@ -250,12 +245,12 @@
   "nav": {
     "bookCall": "Book a call",
     "closeMenu": "Close",
+    "engagements": "Engagements",
     "faq": "FAQ",
     "language": "Français",
     "mobile": "Mobile",
     "openMenu": "Menu",
     "overhaul": "Overhaul",
-    "pricing": "Pricing",
     "primary": "Primary",
     "process": "Process",
     "skipToContent": "Skip to content",

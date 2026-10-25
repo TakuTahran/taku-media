@@ -11,6 +11,52 @@
       "prep": "Ayez sous la main : vos technologies principales, votre date de lancement visée et un lien vers le prototype ou l’accès au dépôt.",
       "title": "Ne laissez plus les postes vacants freiner votre produit."
     },
+    "engagements": {
+      "cta": "Obtenir une soumission",
+      "display": "Formules",
+      "featured": "Le plus demandé",
+      "label": "Façons de travailler avec nous",
+      "tiers": [
+        {
+          "body": "Deux ingénieurs seniors intègrent votre dépôt pour éliminer la dette technique, construire les intégrations tierces manquantes et terminer les fonctionnalités en retard.",
+          "label": "Carnet de tâches",
+          "name": "Sprint de deux semaines",
+          "points": [
+            "2 ingénieurs full-stack seniors dédiés",
+            "Intégration terminée en moins de 48 heures",
+            "Accès direct à Slack, GitHub et Linear",
+            "Points quotidiens asynchrones et revues de PR"
+          ],
+          "timeline": "2 semaines"
+        },
+        {
+          "body": "Transformez des applications fragiles générées par l’IA (Cursor/v0/Bolt/Lovable) en plateformes infonuagiques sécurisées, prêtes pour des clients d’entreprise payants.",
+          "label": "Refactorisation de prototype",
+          "name": "Refonte de code IA",
+          "points": [
+            "Audit complet de sécurité et des vulnérabilités",
+            "Refactorisation complète de l’architecture et du schéma",
+            "Frontières de types, gestion des erreurs et journalisation",
+            "Infrastructure de production AWS/Supabase",
+            "Suite de tests automatisés et flux de PR"
+          ],
+          "timeline": "2 à 4 semaines"
+        },
+        {
+          "body": "Des spécifications de conception à la mise en production en 30 jours. Une plateforme Web complète ou une application iOS/Android native prête pour le marché.",
+          "label": "Développement complet",
+          "name": "Sprint MVP mobile ou Web",
+          "points": [
+            "3 ingénieurs full-stack ou mobiles seniors + un architecte principal",
+            "Backend complet, orchestration d’API et couche de données",
+            "Déploiement sur l’App Store, Google Play ou le Web",
+            "14 jours de stabilisation après le lancement"
+          ],
+          "timeline": "4 semaines"
+        }
+      ],
+      "title": "Portée fixe. Dates de livraison garanties. Aucune surprise."
+    },
     "faq": {
       "display": "Vos questions, nos réponses.",
       "items": [
@@ -48,7 +94,7 @@
       "chipBody": "Cadrage avec un ingénieur senior",
       "chipTitle": "Appel de 15 min",
       "ctaPrimary": "Réserver une revue d’architecture de 15 min",
-      "ctaSecondary": "Voir les sprints à prix fixe →",
+      "ctaSecondary": "Voir nos formules →",
       "eyebrow": "Nous sommes Taku-Media®",
       "marquee": "Défilez pour explorer —",
       "stackLabel": "Technologies de production de niveau entreprise",
@@ -66,7 +112,7 @@
       "keywords": "refonte de prototype codé à l’IA, refactorisation de prototype, développement d’applications mobiles, iOS Swift, Android Kotlin, sprints React, équipe de développement externe",
       "ogDescription": "Transformez vos applications générées par l’IA en plateformes prêtes pour l’entreprise. Sprints d’ingénierie à portée fixe de 2 à 4 semaines.",
       "ogTitle": "Escouades d’ingénieurs seniors | Du prototype à la production en quelques jours",
-      "orgDescription": "Ingénierie logicielle senior en formule clé en main : sprints de développement à prix fixe, refontes de prototypes pour la production et applications mobiles multiplateformes.",
+      "orgDescription": "Ingénierie logicielle senior en formule clé en main : sprints de développement à portée fixe, refontes de prototypes pour la production et applications mobiles multiplateformes.",
       "title": "Escouades d’ingénieurs seniors et mise en production"
     },
     "mobile": {
@@ -120,57 +166,6 @@
         "Optimiser les requêtes, indexer le schéma et mutualiser les connexions à la base de données"
       ],
       "title": "Transformez votre prototype codé à l’IA en plateforme de production solide."
-    },
-    "pricing": {
-      "display": "Tarifs",
-      "featured": "Le plus demandé",
-      "label": "Tarifs transparents",
-      "tiers": [
-        {
-          "body": "Deux ingénieurs seniors intègrent votre dépôt pour éliminer la dette technique, construire les intégrations tierces manquantes et terminer les fonctionnalités en retard.",
-          "cta": "Réserver une date de sprint",
-          "label": "Carnet de tâches",
-          "name": "Sprint de deux semaines",
-          "points": [
-            "2 ingénieurs full-stack seniors dédiés",
-            "Intégration terminée en moins de 48 heures",
-            "Accès direct à Slack, GitHub et Linear",
-            "Points quotidiens asynchrones et revues de PR"
-          ],
-          "price": "12 500 $ US",
-          "terms": "Forfait payable d’avance"
-        },
-        {
-          "body": "Transformez des applications fragiles générées par l’IA (Cursor/v0/Bolt/Lovable) en plateformes infonuagiques sécurisées, prêtes pour des clients d’entreprise payants.",
-          "cta": "Réserver une refonte",
-          "label": "Refactorisation de prototype",
-          "name": "Refonte de code IA",
-          "points": [
-            "Audit complet de sécurité et des vulnérabilités",
-            "Refactorisation complète de l’architecture et du schéma",
-            "Frontières de types, gestion des erreurs et journalisation",
-            "Infrastructure de production AWS/Supabase",
-            "Suite de tests automatisés et flux de PR"
-          ],
-          "price": "14 500 $ US",
-          "terms": "50 % d’avance, 50 % au déploiement"
-        },
-        {
-          "body": "Des spécifications de conception à la mise en production en 30 jours. Une plateforme Web complète ou une application iOS/Android native prête pour le marché.",
-          "cta": "Lancer un nouveau MVP",
-          "label": "Développement complet",
-          "name": "Sprint MVP mobile ou Web",
-          "points": [
-            "3 ingénieurs full-stack ou mobiles seniors + un architecte principal",
-            "Backend complet, orchestration d’API et couche de données",
-            "Déploiement sur l’App Store, Google Play ou le Web",
-            "14 jours de stabilisation après le lancement"
-          ],
-          "price": "25 000 $ US",
-          "terms": "Livraison en quatre semaines"
-        }
-      ],
-      "title": "Portée fixe. Dates de livraison garanties. Aucune surprise."
     },
     "problem": {
       "cards": [
@@ -250,12 +245,12 @@
   "nav": {
     "bookCall": "Réserver un appel",
     "closeMenu": "Fermer",
+    "engagements": "Formules",
     "faq": "FAQ",
     "language": "English",
     "mobile": "Mobile",
     "openMenu": "Menu",
     "overhaul": "Refonte",
-    "pricing": "Tarifs",
     "primary": "Navigation principale",
     "process": "Processus",
     "skipToContent": "Aller au contenu",
